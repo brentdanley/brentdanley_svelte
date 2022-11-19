@@ -33,5 +33,10 @@
 		"vite": "^3.1.0"
 	},
 	"type": "module",
-	"types": "./Plot.svelte.d.ts"
+	"types": "./Plot.svelte.d.ts",
+	"dependencies": {
+		"@fortawesome/free-brands-svg-icons": "^6.2.1",
+		"@fortawesome/free-solid-svg-icons": "^6.2.1",
+		"svelte-fa": "^3.0.3"
+	}
 }

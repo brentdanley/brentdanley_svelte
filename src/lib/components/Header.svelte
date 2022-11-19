@@ -1,7 +1,10 @@
-<script lang="ts"></script>
+<script lang="ts">
+	import Fa from 'svelte-fa/src/fa.svelte';
+	import { faHome } from '@fortawesome/free-solid-svg-icons';
+</script>
 
 <header>
-	<a href="/">Home</a>
+	<a href="/"><Fa icon={faHome} /></a>
 
 	<nav>
 		<ul>

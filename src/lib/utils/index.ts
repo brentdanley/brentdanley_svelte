@@ -1,10 +1,17 @@
+type MetadataType = {
+	metadata: {
+		title: string;
+		date: string;
+	};
+};
+
 export const fetchMarkdownPosts = async () => {
 	const allPostFiles = import.meta.glob('/src/routes/blog/*.md');
 	const iterablePostFiles = Object.entries(allPostFiles);
 
 	const allPosts = await Promise.all(
 		iterablePostFiles.map(async ([path, resolver]) => {
-			const { metadata } = await resolver();
+			const { metadata } = (await resolver()) as MetadataType;
 			const postPath = path.slice(11, -3);
 
 			return {

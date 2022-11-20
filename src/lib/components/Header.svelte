@@ -24,7 +24,7 @@
 <style lang="scss">
 	header {
 		padding: 1rem;
-		background: lightskyblue;
+		background: var(--quinary-color);
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
@@ -37,7 +37,7 @@
 
 		a {
 			text-decoration: none;
-			color: inherit;
+			color: var(--secondary-color);
 		}
 	}
 </style>

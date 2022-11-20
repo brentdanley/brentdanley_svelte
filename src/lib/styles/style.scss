@@ -1,5 +1,18 @@
 /* style.scss */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,900;1,400;1,900&display=swap');
+
+:root {
+	--primary-color: #e63946;
+	--secondary-color: #f1faee;
+	--tertiary-color: #a8dadc;
+	--quaternary-color: #457b9d;
+	--quinary-color: #1d3557;
+	/* 62.5% of 16px browser font size is 10px */
+	font-size: 62.5%;
+}
+
 body {
+	font-size: 1.6rem;
 	margin: 0;
 	background: #eee;
 	color: #333;
@@ -9,5 +22,7 @@ body {
 main {
 	padding: 1rem;
 	margin: 2rem auto;
-	max-width: 40rem;
+	width: 90%;
+	max-width: 1200px;
+	font-family: 'Merriweather', serif;
 }

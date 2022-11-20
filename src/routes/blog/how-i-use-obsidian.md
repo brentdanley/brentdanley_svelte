@@ -1,6 +1,7 @@
 ---
 title: How I use Obsidian
 date: 2022-11-16
+tags: [obsidian, productivity]
 ---
 
 **Start [HERE](https://help.obsidian.md/Obsidian/Index) with the official documentation.**
@@ -9,7 +10,7 @@ date: 2022-11-16
 
 For many persons, daily notes are for archiving activities or journaling. For me, it's a place in the morning to plan my day in terms of to-dos and meetings, and from then on they act as a scratch paper. I don't refer back to them, and many of the notes I write on them I later move to their own notes for further development.
 
-I use the _Daily Notes_ [[#^core-plugins]] as well as the _Calendar_ community plugin for this.
+I use the _Daily Notes_ as well as the _Calendar_ community plugin for this.
 
 My Daily Note is based on a _Templater_ template.
 
@@ -27,26 +28,27 @@ My Daily Note is based on a _Templater_ template.
 
 ## Plugins
 
-#### Core plugins ^core-plugins
+#### Core plugins
 
-Backlinks
-Command palette
-Daily notes
-File recovery
-Note composer
-Page preview
-Quick switcher
-Templates
+- Backlinks
+- Command palette
+- Daily notes
+- File recovery
+- Note composer
+- Page preview
+- Quick switcher
+- Templates
 
 #### Community plugins
 
-Calendar
-Emoji Toolbar
-Markdown prettifier
-Paste URL into selection
-**QuickAdd**
-Tasks
-**Templater**
+- **Dataview**
+- **Templater**
+- **QuickAdd**
+- Calendar
+- Emoji Toolbar
+- Markdown prettifier
+- Paste URL into selection
+- Tasks
 
 ## My usecases
 

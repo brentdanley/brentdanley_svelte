@@ -9,22 +9,27 @@
 	const { title, date, tags, Content } = data;
 </script>
 
+<svelte:head>
+	<title>Brent Danley - Blog: {title}</title>
+	<meta property="og:title" content={`Brent Danley - Blog ${title}}`} />
+</svelte:head>
+
 <article>
+	{#if tags != undefined}
+		<TagBar {tags} />
+	{/if}
 	<h1>{title}</h1>
 	<p class="publish-date">
 		<Fa icon={faCalendar} />
 		{format(new Date(date), 'EEEE, LLLL d, yyyy')}
 	</p>
-	{#if tags != undefined}
-		<TagBar {tags} />
-	{/if}
 	<Content />
 </article>
 
 <style lang="scss">
 	article {
 		& :global(h2) {
-			color: green;
+			color: var(--quinary-color);
 		}
 
 		& :global(p) {

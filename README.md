@@ -1,18 +1,4 @@
-# create-svelte
-
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+# brentdanley.com - The personal website of Brent Danley
 
 ## Developing
 
@@ -25,19 +11,24 @@ npm run dev
 npm run dev -- --open
 ```
 
-## Building
+## Hosting
 
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+Site is hosted on Vercel.
 
 ## Colors
 
 ![color swatch](./src/lib/images/color_swatch.png?raw=true 'Color Swatch')
 [Coolors](https://coolors.co/palettes/trending)
+
+## Fonts
+
+Google Fonts: [Merriweather](https://fonts.google.com/specimen/Merriweather?query=merriweather)
+
+## Custom Components
+
+**\<CloudinaryImage /\>** - Returns a responsive image hosted on the Cloudinary platform, with optional caption.
+Arguments are `image_name`, `alt`, and optional `caption`.
+
+## Acknowledgments
+
+_Josh Collinsworth's [excellent blog post](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog) was an invaluable guide when developing this site._ Thanks, [@josh-collinsworth](https://github.com/josh-collinsworth).

@@ -1,28 +1,26 @@
-<!-- src/routes/blog/+page.svelte -->
+<!-- src/routes/blog/category/[category]/+page.svelte -->
 <script lang="ts">
+	import { format } from 'date-fns';
 	import Fa from 'svelte-fa/src/fa.svelte';
 	import { faCalendar } from '@fortawesome/free-regular-svg-icons';
-	import TagBar from '$lib/components/TagBar.svelte';
-	import { format } from 'date-fns';
 
 	type PostType = {
 		path: string;
 		meta: {
 			title: string;
 			date: string;
-			tags: string[];
 		};
 	};
 
-	export let data: { posts: PostType[] };
+	export let data: { category: string; posts: PostType[] };
 </script>
 
 <svelte:head>
-	<title>Brent Danley - Blog</title>
-	<meta property="og:title" content="Brent Danley - Blog" />
+	<title>Brent Danley - Blog Category {data.category}</title>
+	<meta property="og:title" content={`Brent Danley - Blog Category ${data.category}`} />
 </svelte:head>
 
-<h1>Blog</h1>
+<h1>Category: <span class="category-name">{data.category}</span></h1>
 
 <ul>
 	{#each data.posts as post}
@@ -36,14 +34,24 @@
 				<Fa icon={faCalendar} />
 				{format(new Date(post.meta.date), 'EEEE, LLLL d, yyyy')}
 			</div>
-			<TagBar tags={post.meta.tags} />
 		</li>
 	{/each}
 </ul>
 
 <style lang="scss">
+	h1 {
+		.category-name {
+			font-size: inherit;
+			background-color: var(--quaternary-color);
+			color: var(--tertiary-color);
+			padding: 0.5rem 1rem;
+			border-radius: 0.3rem;
+		}
+	}
+
 	ul {
 		list-style-type: none;
+
 		.post-title {
 			color: var(--quinary-color);
 			margin-bottom: 0.4rem;
@@ -55,7 +63,6 @@
 		}
 		.published-date {
 			color: var(--quaternary-color);
-			margin-bottom: 0.5rem;
 		}
 	}
 </style>

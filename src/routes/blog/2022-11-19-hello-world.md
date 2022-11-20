@@ -8,8 +8,8 @@ tags: [svelte, sveltekit, 'markdown']
     import CloudinaryImage from '$lib/components/CloudinaryImage.svelte'
 </script>
 
-<CloudinaryImage image_name="danlers_campellis" alt="Danlers at Camp Ellis" />
-
 [Let's learn SvelteKit...](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog) by Josh Collinsworth
 
 **Nice to meet you!**
+
+[Go to About](/about)

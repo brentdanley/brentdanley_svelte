@@ -4,7 +4,7 @@
 
 <ul>
 	{#each tags as tag}
-		<li>{tag}</li>
+		<li><a href={`/blog/category/${tag}`} title={`Blog category ${tag}`}>{tag}</a></li>
 	{/each}
 </ul>
 
@@ -21,6 +21,11 @@
 			color: var(--tertiary-color);
 			padding: 0.5rem 1rem;
 			border-radius: 0.3rem;
+
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
 		}
 	}
 </style>

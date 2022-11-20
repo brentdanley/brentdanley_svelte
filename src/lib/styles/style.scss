@@ -1,5 +1,5 @@
 /* style.scss */
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,900;1,400;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,900;1,400;1,900&family=Passion+One:wght@400;900&display=swap');
 
 :root {
 	--primary-color: #e63946;
@@ -7,22 +7,32 @@
 	--tertiary-color: #a8dadc;
 	--quaternary-color: #457b9d;
 	--quinary-color: #1d3557;
+	--senary-color: #ec9a9a;
 	/* 62.5% of 16px browser font size is 10px */
 	font-size: 62.5%;
 }
 
 body {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	grid-template-areas: 'header' 'main' 'footer';
 	font-size: 1.6rem;
 	margin: 0;
 	background: #eee;
-	color: #333;
+	color: var(--quinary-color);
 	font-family: sans-serif;
+	min-height: 100vh;
 }
 
 main {
+	grid-area: main;
 	padding: 1rem;
 	margin: 2rem auto;
 	width: 90%;
 	max-width: 1200px;
 	font-family: 'Merriweather', serif;
+
+	h1 {
+		font-size: clamp(2.4rem, 6vw, 5.2rem);
+	}
 }

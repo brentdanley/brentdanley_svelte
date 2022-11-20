@@ -16,7 +16,6 @@ body {
 	display: grid;
 	grid-template-rows: auto 1fr auto;
 	grid-template-areas: 'header' 'main' 'footer';
-	font-size: 1.6rem;
 	margin: 0;
 	background: #eee;
 	color: var(--quinary-color);
@@ -26,6 +25,7 @@ body {
 
 main {
 	grid-area: main;
+	font-size: 1.6rem;
 	padding: 1rem;
 	margin: 2rem auto;
 	width: 90%;

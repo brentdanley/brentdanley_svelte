@@ -111,11 +111,11 @@ Look through the other core plugins, select the ones you think would be most hel
 
 **QuickAdd** - Quick Add provides a way to create macros to do things like create new notes based on specific templates. It can save a lot of time.
 
-Calendar - Calendar adds, well, a calendar to Obsidian and shows the level of activity each day. It's also a quick way to generate your daily note.
+**Calendar** - Calendar adds, well, a calendar to Obsidian and shows the level of activity each day. It's also a quick way to generate your daily note.
 
-Emoji Shortcodes - This plugin provides the ability to add emoji with the same colon-syntax that we love in Slack.
+**Emoji Shortcodes** - This plugin provides the ability to add emoji with the same colon-syntax that we love in Slack.
 
-Markdown prettifier - Want your markdown properly formatted, automatically. Get this plugin.
+**Markdown prettifier** - Want your markdown properly formatted, automatically. Get this plugin.
 
 ## Features I Love ❤️
 

@@ -40,6 +40,12 @@
 			width: 100%;
 		}
 
+		& :global(p),
+		& :global(li) {
+			font-size: 2.2rem;
+			line-height: 1.8;
+		}
+
 		& :global(p > code) {
 			color: var(--primary-color);
 			display: inline-block;

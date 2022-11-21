@@ -42,8 +42,8 @@
 
 		& :global(p),
 		& :global(li) {
-			font-size: 2.2rem;
-			line-height: 1.8;
+			font-size: 1.8rem;
+			line-height: 1.4;
 		}
 
 		& :global(p > code) {

@@ -28,6 +28,7 @@
 <style lang="scss">
 	header {
 		grid-area: header;
+		font-size: 2rem;
 		font-family: 'Merriweather', serif;
 		padding: 1rem;
 		background: var(--quinary-color);

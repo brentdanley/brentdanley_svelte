@@ -35,4 +35,8 @@ main {
 	h1 {
 		font-size: clamp(2.4rem, 6vw, 5.2rem);
 	}
+
+	a {
+		color: inherit;
+	}
 }

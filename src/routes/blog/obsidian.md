@@ -106,22 +106,26 @@ Look through the other core plugins, select the ones you think would be most hel
 ### Community plugins
 
 **Dataview** - This is perhaps the most powerful plugin I use. It requires some minor SQL-like coding, but if you can handle that you'll be able to use it to add tremendous power to your notes.
+
 **Templater** - This is like the core _Template_ plugin on steroids. You can use variables to make it easy to populate new notes in non-trivial ways, as well as transform things like dates.
+
 **QuickAdd** - Quick Add provides a way to create macros to do things like create new notes based on specific templates. It can save a lot of time.
+
 Calendar - Calendar adds, well, a calendar to Obsidian and shows the level of activity each day. It's also a quick way to generate your daily note.
+
 Emoji Shortcodes - This plugin provides the ability to add emoji with the same colon-syntax that we love in Slack.
+
 Markdown prettifier - Want your markdown properly formatted, automatically. Get this plugin.
 
 ## Features I Love ❤️
 
-1. (Back)Linking to other notes with the \[\[\]\] syntax. This simple in-line syntax allows you to quickly, as you type, link to another note in your vault, create a reference to a new note, or simply create a reference for the graph view as a sort of quasi-tag.
-2. As mentioned above, create a new future note anwhere along with a backlink by simply wrapping a word(s) in square brackets. When you click on this link, it'll create a note. You can also search on these, like tags, even if you never use it to [create a note].
-3. [Callouts](https://help.obsidian.md/How+to/Use+callouts) are incredibly. Quickly draw attention to important little snippets and notes in a visually appealing way.
-4. Editor Tabs - A new core feature, and very powerful.
-5. Plugins - Whether you want to add interactive maps to your notes or create complex tables or drawings, there are plugins to make it easy. Obsidian can be what you want it to be, simple or complex. I prefer simple.
-6. **Vim** support, but I know I'm not like most.
-7. Markdown - This is something that sets Obsidian apart. The notes are wholly mine, non-proprietary, and portable. Writing in markdown syntax is super natural and intuitive, and Obsidian immediately generates previews even while editing (a recent feature).
-8. Themes - Make Obsidian your own. Start with a theme and customize with your own JS and CSS. It's build on the web standards we know and love, so go crazy.
+1. **(Back)Linking** to other notes with the \[\[\]\] syntax. This simple in-line syntax allows you to quickly, as you type, link to another note in your vault, create a reference to a new note, or simply create a reference for the graph view as a sort of quasi-tag.
+2. **[Callouts](https://help.obsidian.md/How+to/Use+callouts)** are incredibly. Quickly draw attention to important little snippets and notes in a visually appealing way.
+3. **Editor Tabs** - A new core feature, and very powerful.
+4. **Plugins** - Whether you want to add interactive maps to your notes or create complex tables or drawings, there are plugins to make it easy. Obsidian can be what you want it to be, simple or complex. I prefer simple.
+5. **Vim support**, but I know I'm not like most.
+6. **Markdown** - This is something that sets Obsidian apart. The notes are wholly mine, non-proprietary, and portable. Writing in markdown syntax is super natural and intuitive, and Obsidian immediately generates previews even while editing (a recent feature).
+7. **Themes** - Make Obsidian your own. Start with a theme and customize with your own JS and CSS. It's build on the web standards we know and love, so go crazy.
 
 ## Have fun.
 

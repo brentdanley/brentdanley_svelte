@@ -6,6 +6,7 @@
 
 code[class*='language-'],
 pre[class*='language-'] {
+	font-size: 1.4rem;
 	color: #c5c8c6;
 	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
 	font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
@@ -28,10 +29,13 @@ pre[class*='language-'] {
 
 /* Code blocks */
 pre[class*='language-'] {
+	box-sizing: border-box;
 	padding: 1em;
 	margin: 0.5em 0;
 	overflow: auto;
 	border-radius: 0.3em;
+	width: 90vw;
+	max-width: 100%;
 }
 
 :not(pre) > code[class*='language-'],

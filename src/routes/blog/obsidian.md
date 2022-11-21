@@ -4,6 +4,10 @@ date: 2022-11-21
 tags: [obsidian, productivity]
 ---
 
+<script>
+    import CloudinaryImage from '$lib/components/CloudinaryImage.svelte'
+</script>
+
 If you're like me you always have a lot going on, are constantly learning new things, and need a way to organize the plethora of information in your life. Whether I'm taking notes about the book I'm reading, planning a holiday meal, creating a new website, or just have thoughts in my head I need to get out, a good note-taking tool is important.
 
 There are many out there, and for years I've been a devotee of Evernote, but I've since adopted Obsidian and find it indepensible.
@@ -72,15 +76,19 @@ Similar to cheatsheets, I also generate starter notes for what I call my "Knowle
 
 I have a section of my Daily Note that uses _dataview_ to list the oldest two Knowledge Gap notes, inviting me to learn something new and narrow my personal knowledge gap.
 
-\```dataview
+<pre>
+```dataview
 LIST
 FROM "Knowledge Gap"
 SORT date-created asc
 LIMIT 2
-\```
+```
+</pre>
+
 Which turns it into this:
 
-<CloudinaryImage alt="Knowledge Gap with dataview" image="knowledgegap_dataview" title="Knowledge Gap with dataview" />
+<CloudinaryImage alt="Knowledge Gap with dataview" image_name="knowledgegap_dataview" title="Knowledge Gap with dataview" />
+
 ### Ideas
 
 I make notes to capture ideas and plan for things like trips I want to take, remodels of the loft, or gifts for Skye.
@@ -104,7 +112,7 @@ Calendar - Calendar adds, well, a calendar to Obsidian and shows the level of ac
 Emoji Shortcodes - This plugin provides the ability to add emoji with the same colon-syntax that we love in Slack.
 Markdown prettifier - Want your markdown properly formatted, automatically. Get this plugin.
 
-### Features I Love ❤️
+## Features I Love ❤️
 
 1. (Back)Linking to other notes with the \[\[\]\] syntax. This simple in-line syntax allows you to quickly, as you type, link to another note in your vault, create a reference to a new note, or simply create a reference for the graph view as a sort of quasi-tag.
 2. As mentioned above, create a new future note anwhere along with a backlink by simply wrapping a word(s) in square brackets. When you click on this link, it'll create a note. You can also search on these, like tags, even if you never use it to [create a note].

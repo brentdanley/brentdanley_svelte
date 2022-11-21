@@ -22,7 +22,7 @@ I was fortunate to find an [excellent tutorial](https://joshcollinsworth.com/blo
 
 I'm new to Svelte, but several of my engineer friends who I trust are proponents, so I checked it out and was instantly hooked. It is super lightweight, performant, and has a great developer experience.
 
-<iframe class="youtube" width="560" height="315" src="https://www.youtube.com/embed/AdNJ3fydeao" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="youtube" src="https://www.youtube.com/embed/AdNJ3fydeao" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Why Markdown
 
@@ -37,7 +37,7 @@ I love markdown! Markdown files are plain text, but they can be turned into rich
 
 ## Styles
 
-Site uses CSS Grid, obviously, but also newer CSS like the `clamp()` function for responsive fonts and `@container` queries.
+Site uses CSS Grid, obviously, but also newer CSS like the `clamp()` function for responsive fonts, the new `aspect-ratio` property, and `@container` queries.
 
 ## Hosting
 

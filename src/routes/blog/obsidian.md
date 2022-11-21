@@ -1,7 +1,7 @@
 ---
 title: 'Obsidian: My Second Brain'
 date: 2022-11-21
-tags: [obsidian, productivity]
+tags: [obsidian, productivity, 'how to']
 ---
 
 <script>
@@ -125,7 +125,15 @@ Markdown prettifier - Want your markdown properly formatted, automatically. Get 
 
 ## Have fun.
 
-Use Cmd+, to access preferences (just like every other Mac app). Peruse the community plugins and myriad settings options. Create templates. And when you come up with something super neat, be sure to let me know. My setup is super simple and fairly minimal, but I don't know what I'd do without it and I'm sure there are loads of things I could be doing with it, but don't.
+Use `⌘ ,` to access preferences (just like every other Mac app). Peruse the community plugins and myriad settings options. Create templates. And when you come up with something super neat, be sure to let me know. My setup is super simple and fairly minimal, but I don't know what I'd do without it and I'm sure there are loads of things I could be doing with it, but don't.
+
+## Phew, you made it this far!
+
+If you really read everything above and got to here, you might as well download Obsidian and check it out for yourself.
+
+[Download Obsidian](https://obsidian.md/download) and then go check out the [Getting Started](https://help.obsidian.md/Obsidian/Index#Getting+started) tips.
+
+Good luck!
 
 ## Additional Resources
 

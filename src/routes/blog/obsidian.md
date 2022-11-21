@@ -1,5 +1,5 @@
 ---
-title: Obsidian: My Second Brain
+title: 'Obsidian: My Second Brain'
 date: 2022-11-21
 tags: [obsidian, productivity]
 ---

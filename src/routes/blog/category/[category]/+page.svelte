@@ -17,7 +17,7 @@
 
 <svelte:head>
 	<title>Brent Danley - Blog Category {data.category}</title>
-	<meta property="og:title" content={`Brent Danley - Blog Category ${data.category}`} />
+	<meta property="og:title" content={`Brent Danley | ${data.category}`} />
 </svelte:head>
 
 <h1>Category: <span class="category-name">{data.category}</span></h1>

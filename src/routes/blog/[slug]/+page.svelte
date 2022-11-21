@@ -11,7 +11,7 @@
 
 <svelte:head>
 	<title>Brent Danley - Blog: {title}</title>
-	<meta property="og:title" content={`Brent Danley - Blog ${title}`} />
+	<meta property="og:title" content={`Brent Danley | ${title}`} />
 </svelte:head>
 
 <article>

@@ -57,7 +57,8 @@
 			align-self: left;
 			display: flex;
 			flex-direction: row;
-			gap: 0.5rem;
+			gap: 1.2rem;
+			font-size: 2rem;
 			li {
 				list-style-type: none;
 				a {
@@ -88,9 +89,11 @@
 			grid-template-columns: 1fr;
 			grid-template-areas: 'social' 'legal';
 
-			nav {
+			.social {
 				align-self: center;
 				margin: 0 auto 1rem;
+				gap: 1.6rem;
+				font-size: 3rem;
 			}
 
 			.legal {

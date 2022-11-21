@@ -32,15 +32,20 @@
 			color: var(--quinary-color);
 		}
 
-		& :global(p) {
-		}
-
 		& :global(.publish-date) {
 			color: var(--quaternary-color);
 		}
 
 		& :global(img) {
 			width: 100%;
+		}
+
+		& :global(p > code) {
+			color: var(--primary-color);
+			display: inline-block;
+			background-color: var(--tertiary-color);
+			border-radius: 0.3rem;
+			padding: 0.3rem 0.5rem;
 		}
 	}
 </style>

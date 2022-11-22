@@ -99,7 +99,7 @@ I've discussed the power of plugins above. Here, I'll list a few I use now and r
 
 ### Core plugins
 
-**Daily notes** - If you'd like a fresh note every day to keep track of just today, get this simple plugin.
+- **Daily notes** - If you'd like a fresh note every day to keep track of just today, get this simple plugin.
 
 Look through the other core plugins, select the ones you think would be most helpful for you, and then look through the settings for each. Doing this will get you very far to being able to start creating your second brain.
 

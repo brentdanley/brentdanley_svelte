@@ -8,7 +8,7 @@ tags: [svelte, sveltekit, markdown, coding, blog]
     import CloudinaryImage from '$lib/components/CloudinaryImage.svelte'
 </script>
 
-Welcome to my new blog! (Actually, it's statisticaly probabable that this site is not new when you're reading this, but it's certainly new while I'm drafting this post.)
+Welcome to my new blog! (Actually, it's statistically probabable that this site is not new when you're reading this, but it's certainly new while I'm drafting this post.)
 
 ## This _new_ site is written in SvelteKit
 

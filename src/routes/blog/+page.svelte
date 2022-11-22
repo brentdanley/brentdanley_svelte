@@ -44,6 +44,7 @@
 <style lang="scss">
 	ul {
 		list-style-type: none;
+		padding: 0;
 		.post-title {
 			color: var(--quinary-color);
 			margin-bottom: 0.4rem;

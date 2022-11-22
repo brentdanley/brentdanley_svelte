@@ -14,6 +14,7 @@
 		list-style-type: none;
 		gap: 0.4rem;
 		padding: 0;
+		flex-wrap: wrap;
 
 		li {
 			font-size: 1.4rem;

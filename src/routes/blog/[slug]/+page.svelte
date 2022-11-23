@@ -29,7 +29,7 @@
 <style lang="scss">
 	article {
 		& :global(h2) {
-			color: var(--quinary-color);
+			color: var(--secondary-light-color);
 		}
 
 		& :global(.publish-date) {
@@ -47,9 +47,9 @@
 		}
 
 		& :global(p > code) {
-			color: var(--primary-color);
+			background-color: var(--secondary-dark-color);
+			color: var(--secondary-light-color);
 			display: inline-block;
-			background-color: var(--tertiary-color);
 			border-radius: 0.3rem;
 			padding: 0.3rem 0.5rem;
 		}

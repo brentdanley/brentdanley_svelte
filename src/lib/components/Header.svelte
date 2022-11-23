@@ -31,11 +31,11 @@
 		font-size: 2rem;
 		font-family: 'Merriweather', serif;
 		padding: 1rem;
-		background: var(--quinary-color);
+		background: var(--secondary-dark-color);
 
 		.site-heading {
 			font-family: 'Passion One', cursive;
-			color: var(--tertiary-color);
+			color: var(--secondary-light-color);
 			font-size: clamp(4rem, 8vw, 6rem);
 			text-align: center;
 			margin: 1.5rem auto;

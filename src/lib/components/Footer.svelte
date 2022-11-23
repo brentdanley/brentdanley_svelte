@@ -47,9 +47,9 @@
 		display: grid;
 		grid-template-areas: 'social legal';
 		grid-area: 'footer';
+		background-color: var(--secondary-middle-color);
+		color: var(--primary-light-color);
 		font-family: 'Merriweather', serif;
-		background-color: var(--quinary-color);
-		color: var(--tertiary-color);
 		padding: 1rem;
 
 		.social {

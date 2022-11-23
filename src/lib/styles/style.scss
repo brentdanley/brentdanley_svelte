@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,900;1,400;1,900&family=Passion+One:wght@400;900&display=swap');
 
 :root {
-	--primary-color: #e63946;
-	--secondary-color: #f1faee;
-	--tertiary-color: #a8dadc;
-	--quaternary-color: #457b9d;
-	--quinary-color: #1d3557;
-	--senary-color: #ec9a9a;
+	--primary-dark-color: #587792;
+	--secondary-dark-color: #f55536;
+	--primary-middle-color: #2589bd;
+	--secondary-middle-color: #5fad56;
+	--primary-light-color: #f1faee;
+	--secondary-light-color: #efca08;
 	/* 62.5% of 16px browser font size is 10px */
 	font-size: 62.5%;
 }
@@ -17,8 +17,8 @@ body {
 	grid-template-rows: auto 1fr auto;
 	grid-template-areas: 'header' 'main' 'footer';
 	margin: 0;
-	background: #eee;
-	color: var(--quinary-color);
+	background: var(--primary-dark-color);
+	color: var(--primary-light-color);
 	font-family: sans-serif;
 	min-height: 100vh;
 }

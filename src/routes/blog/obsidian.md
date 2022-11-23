@@ -87,7 +87,7 @@ LIMIT 2
 
 Which turns it into this:
 
-<CloudinaryImage alt="Knowledge Gap with dataview" image_name="knowledgegap_dataview" title="Knowledge Gap with dataview" />
+<CloudinaryImage alt="Knowledge Gap with dataview" image_name="knowledgegap_dataview" caption="Knowledge Gap with dataview" />
 
 ### Ideas
 

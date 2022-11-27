@@ -16,7 +16,7 @@ Welcome to my new blog! (Actually, it's statistically probabable that this site 
 
 [SvelteKit](https://kit.svelte.dev/) is a Svelte framework that provides all the scaffolding one would need to create a website in Svelte, particularly with regards to routing. As you can see below, it takes only a minute to get fully set up with a bare-bones "Hello World" site.
 
-<CloudinaryImage alt="cloudinary setup" image_name="sveltekit_cli" caption="Cloudinary setup in terminal" />
+<CloudinaryImage alt="sveltekit setup" image_name="sveltekit_cli" caption="SvelteKit setup in terminal" />
 
 I was fortunate to find an [excellent tutorial](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog) by Josh Collinsworth on setting up a SvelteKit + markdown site from beginning to end, and I followed it closely. It's really good and easy to follow. If you're interested in setting up a similar site, you couldn't do much better than to use Josh's excellent tutorial.
 

@@ -31,7 +31,7 @@
 		font-size: 2rem;
 		font-family: 'Merriweather', serif;
 		padding: 1rem;
-		background: var(--secondary-dark-color);
+		background-color: var(--primary-dark-color);
 
 		.site-heading {
 			font-family: 'Passion One', cursive;

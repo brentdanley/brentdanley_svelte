@@ -55,7 +55,7 @@
 			}
 		}
 		.published-date {
-			color: var(--quaternary-color);
+			color: var(--primary-light-color);
 			margin-bottom: 0.5rem;
 		}
 	}

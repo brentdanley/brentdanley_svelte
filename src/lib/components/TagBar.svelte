@@ -18,8 +18,8 @@
 
 		li {
 			font-size: 1.4rem;
-			background-color: var(--secondary-middle-color);
-			color: var(--secondary-light-color);
+			background-color: var(--secondary-dark-color);
+			color: var(--light-font-color);
 			padding: 0.5rem 1rem;
 			border-radius: 0.3rem;
 

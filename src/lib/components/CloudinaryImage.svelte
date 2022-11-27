@@ -22,6 +22,8 @@
 	.cloudinary-image {
 		width: 90%;
 		margin: 2rem auto;
+		padding: 1.5rem;
+		background-color: var(--light-font-color);
 
 		img {
 			width: 100%;
@@ -30,6 +32,7 @@
 			font-size: 1.2rem;
 			font-style: italic;
 			margin-top: 0.2rem;
+			color: var(--dark-font-color);
 		}
 	}
 </style>

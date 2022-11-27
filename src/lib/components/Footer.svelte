@@ -47,8 +47,8 @@
 		display: grid;
 		grid-template-areas: 'social legal';
 		grid-area: 'footer';
-		background-color: var(--secondary-middle-color);
-		color: var(--primary-light-color);
+		background-color: var(--primary-dark-color);
+		color: var(--dark-font-color);
 		font-family: 'Merriweather', serif;
 		padding: 1rem;
 
@@ -62,7 +62,7 @@
 			li {
 				list-style-type: none;
 				a {
-					color: var(--secondary-color);
+					color: var(--light-font-color);
 				}
 			}
 		}

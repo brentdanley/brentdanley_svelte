@@ -3,35 +3,50 @@
 	import { faTwitter, faInstagram, faYoutube, faTiktok } from '@fortawesome/free-brands-svg-icons';
 	import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 	import { format } from 'date-fns';
+	// Create object for each social media platform
+	const social = [
+		{
+			name: 'Email',
+			url: 'mailto: brentdanley@gmail.com',
+			title: 'Email brentdanley@gmail.com',
+			icon: faEnvelope
+		}
+		// {
+		// 	name: 'Twitter',
+		// 	url: 'https://twitter.com/brentdanley',
+		// 	title: '@brentdanley on Twitter',
+		// 	icon: faTwitter
+		// },
+		// {
+		// 	name: 'Instagram',
+		// 	url: 'https://www.instagram.com/brentdanley/',
+		// 	title: '@brentdanley on Instagram',
+		// 	icon: faInstagram
+		// },
+		// {
+		// 	name: 'YouTube',
+		// 	url: 'https://www.youtube.com/@brentdanley',
+		// 	title: '@brentdanley on YouTube',
+		// 	icon: faYoutube
+		// },
+		// {
+		// 	name: 'TikTok',
+		// 	url: 'https://www.tiktok.com/@brentdanley',
+		// 	title: '@brentdanley on TikTok',
+		// 	icon: faTiktok
+		// }
+	];
 </script>
 
 <footer>
 	<nav class="social">
-		<li>
-			<a href="mailto:brentdanley@gmail.com" title="Email brentdanley@gmail.com"
-				><Fa icon={faEnvelope} /></a
-			>
-		</li>
-		<li>
-			<a href="https://twitter.com/brentdanley" title="@brentdanley on Twitter"
-				><Fa icon={faTwitter} /></a
-			>
-		</li>
-		<li>
-			<a href="https://www.instagram.com/brentdanley/" title="@brentdanley on Instagram"
-				><Fa icon={faInstagram} /></a
-			>
-		</li>
-		<li>
-			<a href="https://www.youtube.com/@brentdanley" title="@brentdanley on YouTube"
-				><Fa icon={faYoutube} /></a
-			>
-		</li>
-		<li>
-			<a href="https://www.tiktok.com/@brentdanley" title="@brentdanley on TikTok"
-				><Fa icon={faTiktok} /></a
-			>
-		</li>
+		{#each social as platform (platform.name)}
+			<li>
+				<a href={platform.url} title={platform.title} target="_blank" rel="noopener noreferrer">
+					<Fa icon={platform.icon} />
+				</a>
+			</li>
+		{/each}
 	</nav>
 	<div class="legal">
 		<div class="copyright">&copy;{format(new Date(), 'yyyy')} Brent Danley</div>

@@ -40,7 +40,6 @@
 			width: 100%;
 		}
 
-		& :global(p),
 		& :global(li) {
 			font-size: 1.8rem;
 			line-height: 1.4;

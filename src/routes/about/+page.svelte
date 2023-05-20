@@ -1,4 +1,5 @@
 <script>
+	import FlickrPhotoset from '$lib/components/FlickrPhotoset.svelte';
 	let name = 'Brent';
 </script>
 
@@ -8,6 +9,8 @@
 	Hello, and welcome to my digital abode. I'm {name}, a zealous explorer of the universe we inhabit,
 	both through the lens of science and the thrill of adventure.
 </p>
+
+<FlickrPhotoset photoset_id="72177720301779365" />
 
 <p>
 	My curiosity is kindled by a profound love for science, especially in areas that unmask the

@@ -1,6 +1,12 @@
 <script lang="ts">
 	import Fa from 'svelte-fa/src/fa.svelte';
 	import { faHome } from '@fortawesome/free-solid-svg-icons';
+	const nav_links = [
+		{ name: 'Home', url: '/', title: 'Home', icon: faHome },
+		{ name: 'Blog', url: '/blog', title: 'Blog' },
+		{ name: 'About', url: '/about', title: 'About' },
+		{ name: 'Contact', url: '/contact', title: 'Contact' }
+	];
 </script>
 
 <header>
@@ -8,18 +14,17 @@
 	<div class="primary-nav">
 		<nav>
 			<ul>
-				<li>
-					<a href="/"><Fa icon={faHome} /></a>
-				</li>
-				<li>
-					<a href="/blog">Blog</a>
-				</li>
-				<li>
-					<a href="/about">About</a>
-				</li>
-				<li>
-					<a href="/contact">Contact</a>
-				</li>
+				{#each nav_links as link (link.name)}
+					<li>
+						<a href={link.url} title={link.title}>
+							{#if link.icon}
+								<Fa icon={link.icon} />
+							{:else}
+								{link.name}
+							{/if}
+						</a>
+					</li>
+				{/each}
 			</ul>
 		</nav>
 	</div>

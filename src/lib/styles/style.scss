@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,900;1,400;1,900&family=Passion+One:wght@400;900&display=swap');
 
 :root {
-	--primary-dark-color: hsla(207, 54%, 51%, 100%);
-	--secondary-dark-color: hsla(354, 70%, 50%, 100%);
-	--primary-light-color: hsla(49, 93%, 67%, 100%);
-	--secondary-light-color: hsla(127, 27%, 61%, 100%);
-	--light-font-color: hsla(105, 55%, 96%, 100%);
-	--dark-font-color: hsla(233, 24%, 19%, 100%);
+	--primary-dark-color: hsl(203, 41%, 51%);
+	--secondary-dark-color: hsl(2, 59%, 54%);
+	--primary-light-color: hsl(105, 55%, 96%);
+	--secondary-light-color: hsl(182, 43%, 76%);
+	--light-font-color: var(--primary-light-color);
+	--dark-font-color: hsl(215, 50%, 23%);
 	/* 62.5% of 16px browser font size is 10px */
 	font-size: 62.5%;
 }

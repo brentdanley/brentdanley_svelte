@@ -1,6 +1,10 @@
 <script lang="ts">
 	import Fa from 'svelte-fa/src/fa.svelte';
-	import { faExternalLink } from '@fortawesome/free-solid-svg-icons';
+	import {
+		faExternalLink,
+		faChevronCircleLeft,
+		faChevronCircleRight
+	} from '@fortawesome/free-solid-svg-icons';
 	import { onMount } from 'svelte';
 	import axios from 'axios';
 	// @ts-ignore
@@ -39,7 +43,17 @@
 </script>
 
 {#if browser && photos.length > 0}
-	<Carousel particlesToShow={3} particlesToScroll={3} autoplay={true}>
+	<Carousel
+		let:showPrevPage
+		let:showNextPage
+		particlesToShow={3}
+		particlesToScroll={3}
+		autoplay={true}
+		dots={false}
+	>
+		<div slot="prev" on:click={showPrevPage} class="custom-arrow custom-arrow-prev">
+			<Fa icon={faChevronCircleLeft} />
+		</div>
 		{#each photos as photo (photo.id)}
 			<div class="photo-wrapper">
 				<div class="flickr-photo">
@@ -58,10 +72,23 @@
 				</div>
 			</div>
 		{/each}
+		<div slot="next" on:click={showNextPage} class="custom-arrow custom-arrow-next">
+			<Fa icon={faChevronCircleRight} />
+		</div>
+		1
 	</Carousel>
 {/if}
 
 <style lang="scss">
+	.custom-arrow {
+		display: flex;
+		color: var(--light-font-color);
+		font-size: 3.2rem;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		margin: 0 1rem;
+	}
 	.photo-wrapper {
 		width: 100%;
 		height: 100%;

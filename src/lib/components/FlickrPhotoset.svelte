@@ -38,36 +38,43 @@
 	});
 </script>
 
-// Uses svelte-carousel to display a Flickr album. https://vadimkorr.github.io/svelte-carousel/
 {#if browser && photos.length > 0}
-	<Carousel particlesToShow={3} particlesToScroll={3}>
+	<Carousel particlesToShow={3} particlesToScroll={3} autoplay={true}>
 		{#each photos as photo (photo.id)}
-			<div class="flickr-photo">
-				<img
-					src={`https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`}
-					alt={photo.title}
-				/>
-				<p class="caption">
-					<a
-						href={`https://www.flickr.com/photos/${import.meta.env.VITE_FLICKR_USER_ID}/${
-							photo.id
-						}`}
-						target="_blank">{photo.title} <sup><Fa icon={faExternalLink} /></sup></a
-					>
-				</p>
+			<div class="photo-wrapper">
+				<div class="flickr-photo">
+					<img
+						src={`https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`}
+						alt={photo.title}
+					/>
+					<p class="caption">
+						<a
+							href={`https://www.flickr.com/photos/${import.meta.env.VITE_FLICKR_USER_ID}/${
+								photo.id
+							}`}
+							target="_blank">{photo.title} <sup><Fa icon={faExternalLink} /></sup></a
+						>
+					</p>
+				</div>
 			</div>
 		{/each}
 	</Carousel>
 {/if}
 
 <style lang="scss">
+	.photo-wrapper {
+		width: 100%;
+		height: 100%;
+	}
+
 	.flickr-photo {
 		background-color: white;
 		display: inline-grid;
 		grid-template-areas: 'image' 'caption';
 		grid-template-rows: 1fr 80px;
-		margin: 1rem;
+		height: 100%;
 		padding: 1rem;
+		margin: 1rem;
 
 		img {
 			grid-area: image;

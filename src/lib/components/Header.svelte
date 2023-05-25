@@ -40,7 +40,7 @@
 
 		.site-heading {
 			font-family: 'Passion One', cursive;
-			color: var(--secondary-light-color);
+			color: var(--dark-font-color);
 			font-size: clamp(4rem, 8vw, 6rem);
 			text-align: center;
 			margin: 1.5rem auto;

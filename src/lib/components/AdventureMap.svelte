@@ -29,6 +29,7 @@
 		map = new mapboxgl.Map({
 			container: mapContainer,
 			style: 'mapbox://styles/mapbox/satellite-v9', // style URL
+			center: [-77.04, 38.907], // starting position [lng, lat]
 			zoom: 3
 		});
 
@@ -80,13 +81,20 @@
 
 			// add markers for each point
 			points.forEach(({ lat, lng, label }) => {
+				// Create a DOM element for the marker and put in it the icon
+				const el = document.createElement('div');
+				el.className = 'marker';
+				el.innerHTML = '<img src="/airfield.svg" alt="airfield marker" />';
+
 				// Create a DOM element for the marker label
 				const markerLabel = document.createElement('div');
 				markerLabel.className = 'marker-label';
 				markerLabel.textContent = label;
 
 				// Create the map marker and add the label element to it
-				const marker = new mapboxgl.Marker().setLngLat([lng, lat]).addTo(map);
+				const marker = new mapboxgl.Marker({ color: '#ff0000', element: el })
+					.setLngLat([lng, lat])
+					.addTo(map);
 
 				// Add the label element to the map marker
 				marker.getElement().appendChild(markerLabel);

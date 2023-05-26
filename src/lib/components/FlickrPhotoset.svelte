@@ -75,7 +75,6 @@
 		<div slot="next" on:click={showNextPage} class="custom-arrow custom-arrow-next">
 			<Fa icon={faChevronCircleRight} />
 		</div>
-		1
 	</Carousel>
 {/if}
 

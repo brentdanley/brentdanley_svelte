@@ -1,4 +1,6 @@
 <script>
+	import AdventureMap from '$lib/components/AdventureMap.svelte';
+
 	let name = 'Brent';
 </script>
 

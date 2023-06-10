@@ -17,7 +17,7 @@ tags: [flying, flight, aviation, adventure, cross-country]
 
 ### Leg 1 - KPWM to KESN
 
-<p>On the trip down flew directly over JFK and got to see a 747 fly directly underneath us, and then a bit later heard ATC mention a flight of four Boeing 767s. As we'd guessed, they were KC-46 Pegasus aircraft flying in formation. It was a pretty cool sight.</p>
+<p>On the trip down we flew directly over JFK and got to see a 747 fly directly underneath us, and then a bit later heard ATC mention a flight of four Boeing 767s. As we'd guessed, they were KC-46 Pegasus aircraft flying in formation. It was a pretty cool sight.</p>
 
 <p>We had breakfast at the Sugar Buns Airport Cafe and Bakery, which was at the airport. Perhaps the coolest part of the stop was the Jeep-looking golf cart we borrowed to drive to the cafe. Check it out in the photo gallery below.</p>
 
@@ -41,7 +41,7 @@ tags: [flying, flight, aviation, adventure, cross-country]
 
 <p>I flew the first and third legs on the way back. There were some storms along the way, which provided me the thrill of flying in actual instrument conditions, which I'd never done. It was so cool to punch into the clouds and suddently get tossed about, just to pop out the other side and see the sun shining. I was glad to have the autopilot for those legs, because it was a lot of work to keep the plane level and on course.</p>
 
-<p>Our last stop of the trip, in Pennsylvania, was uneventful. No cafe or aviation museum, but a nice airport and much needed change for CJ and I to stretch our legs and empty our bladders.</p>
+<p>Our last stop of the trip, in Pennsylvania, was uneventful. No cafe or aviation museum, but a nice airport and much needed chance for CJ and I to stretch our legs and empty our bladders.</p>
 
 ### Leg 6 - KABE to KPWM
 

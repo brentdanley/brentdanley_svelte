@@ -1,7 +1,7 @@
 <script context="module" lang="ts">
 	export type Track = {
 		kml: string;
-		color: string;
+		color?: string;
 	};
 
 	export type Point = {
@@ -64,7 +64,7 @@
 						'line-cap': 'round'
 					},
 					paint: {
-						'line-color': track.color, // Color from track object
+						'line-color': track.color ? track.color : 'hsl(203, 41%, 51%)', // Color from track object
 						'line-width': 4
 					}
 				});

@@ -1,19 +1,5 @@
-<script lang="ts">
-	import Fa from 'svelte-fa/src/fa.svelte';
-	import {
-		faExternalLink,
-		faChevronCircleLeft,
-		faChevronCircleRight
-	} from '@fortawesome/free-solid-svg-icons';
-	import { onMount } from 'svelte';
-	import axios from 'axios';
-	// @ts-ignore
-	import Carousel from 'svelte-carousel';
-	import { browser } from '$app/environment';
-
-	export let photoset_id: string; // Photoset ID of Flickr album
-
-	type Photo = {
+<script lang="ts" context="module">
+	export type Photo = {
 		id: string;
 		owner: string;
 		secret: string;
@@ -23,7 +9,16 @@
 		ispublic: number;
 		isfriend: number;
 		isfamily: number;
-	};
+	} | null;
+</script>
+<script lang="ts">
+
+	import { onMount } from 'svelte';
+	import axios from 'axios';
+
+	export let photoset_id: string; // Photoset ID of Flickr album
+	import MosaicItem from './MosaicItem.svelte';
+	import PhotoPopup from './PhotoPopup.svelte';
 	let photos: Photo[] = [];
 
 	onMount(async () => {
@@ -40,57 +35,34 @@
 
 		photos = response.data.photoset.photo;
 	});
+
+  let isPopupOpen = false;
+  let selectedPhoto: Photo = null;
+
+  function handleOpenPopup(event: CustomEvent<{ photo: Photo }>) {
+    isPopupOpen = true;
+	selectedPhoto = event.detail.photo;
+  }
+
+  function handleClosePopup() {
+    isPopupOpen = false;
+  }
 </script>
-
-{#if browser && photos.length > 0}
-	<Carousel
-		let:showPrevPage
-		let:showNextPage
-		particlesToShow={3}
-		particlesToScroll={3}
-		autoplay={true}
-		dots={false}
-	>
-		<div slot="prev" on:click={showPrevPage} class="custom-arrow custom-arrow-prev">
-			<Fa icon={faChevronCircleLeft} />
+<div class="photo-wrapper">
+		{#each photos as photo (photo?.id)}
+			<MosaicItem photo={photo} on:openPopup={handleOpenPopup} />
+			{/each}
 		</div>
-		{#each photos as photo (photo.id)}
-			<div class="photo-wrapper">
-				<div class="flickr-photo">
-					<img
-						src={`https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`}
-						alt={photo.title}
-					/>
-					<p class="caption">
-						<a
-							href={`https://www.flickr.com/photos/${import.meta.env.VITE_FLICKR_USER_ID}/${
-								photo.id
-							}`}
-							target="_blank">{photo.title} <sup><Fa icon={faExternalLink} /></sup></a
-						>
-					</p>
-				</div>
-			</div>
-		{/each}
-		<div slot="next" on:click={showNextPage} class="custom-arrow custom-arrow-next">
-			<Fa icon={faChevronCircleRight} />
-		</div>
-	</Carousel>
-{/if}
-
+		
+		{#if isPopupOpen}
+		<PhotoPopup on:closePopup={handleClosePopup} photo={selectedPhoto} />
+		{/if}
 <style lang="scss">
-	.custom-arrow {
-		display: flex;
-		color: var(--light-font-color);
-		font-size: 3.2rem;
-		justify-content: center;
-		align-items: center;
-		cursor: pointer;
-		margin: 0 1rem;
-	}
 	.photo-wrapper {
-		width: 100%;
-		height: 100%;
+		display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust the column width as needed */
+  grid-auto-rows: 1fr; /* Each row has equal height */
+  grid-gap: 10px; /* Adjust the gap between grid items as needed */
 	}
 
 	.flickr-photo {
@@ -122,3 +94,4 @@
 		}
 	}
 </style>
+

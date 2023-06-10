@@ -113,13 +113,17 @@
 	});
 </script>
 
-<div id="map" bind:this={mapContainer} style="width: 100%; height: 600px;" />
+<div id="map" bind:this={mapContainer} />
 
 <style lang="scss">
 	@import 'mapbox-gl/dist/mapbox-gl.css';
 
 	#map {
 		position: relative;
+		width: 100%;
+		aspect-ratio: 4 / 3;
+		max-width: 800px;
+		margin: 2rem auto;
 	}
 
 	.marker-label {

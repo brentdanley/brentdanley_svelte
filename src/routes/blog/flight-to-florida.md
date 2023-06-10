@@ -17,7 +17,7 @@ tags: [flying, flight, aviation, adventure, cross-country]
 
 ### Leg 1 - KPWM to KESN
 
-<p>On the trip down we flew directly over JFK and got to see a 747 fly directly underneath us, and then a bit later heard ATC mention a flight of four Boeing 767s. As we'd guessed, they were KC-46 Pegasus aircraft flying in formation. It was a pretty cool sight.</p>
+<p>On the trip down we flew over JFK and got to see a 747 fly directly underneath us. A bit later we heard ATC mention a flight of four Boeing 767s. As we'd guessed, they were KC-46 Pegasus aircraft flying in formation. It was a pretty cool sight.</p>
 
 <p>We had breakfast at the Sugar Buns Airport Cafe and Bakery, which was at the airport. Perhaps the coolest part of the stop was the Jeep-looking golf cart we borrowed to drive to the cafe. Check it out in the photo gallery below.</p>
 

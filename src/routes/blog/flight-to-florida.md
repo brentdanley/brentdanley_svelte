@@ -19,29 +19,29 @@ tags: [flying, flight, aviation, adventure, cross-country]
 
 <p>On the trip down we flew over JFK and got to see a 747 fly directly underneath us. A bit later we heard ATC mention a flight of four Boeing 767s. As we'd guessed, they were KC-46 Pegasus aircraft flying in formation. It was a pretty cool sight.</p>
 
-<p>We had breakfast at the Sugar Buns Airport Cafe and Bakery, which was at the airport. Perhaps the coolest part of the stop was the Jeep-looking golf cart we borrowed to drive to the cafe. Check it out in the photo gallery below.</p>
+<p>We had breakfast at the [Sugar Buns Airport Cafe and Bakery](https://sugar-buns.com/) on the field at Easton Airport (KESN). Perhaps the coolest part of the stop was the Jeep-looking golf cart we borrowed to drive to the cafe. Check it out in the photo gallery below.</p>
 
 ### Leg 2 - KESN to KGRD
 
-<p>The fuel stop in South Carolina was pretty uneventful. We were only one the ground long enough to use the bathroom and get some snacks and fuel. We were back in the air in less than 30 minutes. They did have a yellow Stearman biplane in the pattern, so that was fun.</p>
+<p>The fuel stop at Greenwood County Airport (KGRD) in South Carolina was pretty uneventful. We were only on the ground long enough to use the bathroom and get some snacks and fuel. We were back in the air in less than 30 minutes. They did have a yellow Stearman biplane in the pattern, so that was fun.</p>
 
 <p>CJ's Cardinal is a joy to fly. It's super roomy and comfortable, and it has an autopilot for the roll axis. This meant that for the legs I flew, most of the work was simply making micro-adjustments to the elevator trim and changing the radio frequency as controllers handed us off from one sector to the next.</p>
 
 ### Leg 3 - KGRD to KPNS
 
-<p>I flew the second leg of the trip down, from Maryland to South Carolina. CJ flew us on to Pensacola.</p>
+<p>I flew the second leg of the trip down, from Maryland to South Carolina. CJ flew us on to Pensacola International Airport (KPNS).</p>
 
 <p>Hanging out with CJs family was a blast. They're super fun, kind, and generous. Great conversation about all sorts of flying, mostly helicopters. And plenty of laughs and great food.</p>
 
 ### Leg 4 - KPNS to KHKY
 
-<p>We flew back to Maine on Sunday. The first leg was from Florida to North Carolina. We stopped at Hickory Regional Airport (KHKY) in North Carolina that had a great little cafe. The food was delicious and the staff were super friendly. The coolest part of the little airport was their outdoor aviation museum. Go check it out on Google Maps.</p>
+<p>We flew back to Maine on Sunday. The first leg was from Pensacola, Florida to Hickory Regional Airport (KHKY) in North Carolina where we enjoyed breakfast at their little cafe. The food was delicious and the staff were super friendly. The coolest part of the little airport was their outdoor aviation museum. Go check it out on Google Maps.</p>
 
 ### Leg 5 - KHKY to KABE
 
 <p>I flew the first and third legs on the way back. There were some storms along the way, which provided me the thrill of flying in actual instrument conditions, which I'd never done. It was so cool to punch into the clouds and suddently get tossed about, just to pop out the other side and see the sun shining. I was glad to have the autopilot for those legs, because it was a lot of work to keep the plane level and on course.</p>
 
-<p>Our last stop of the trip, in Pennsylvania, was uneventful. No cafe or aviation museum, but a nice airport and much needed chance for CJ and I to stretch our legs and empty our bladders.</p>
+<p>Our last stop of the trip at Lehigh Valley International Airport (KABE) in Pennsylvania was uneventful. No cafe or aviation museum, but a nice airport and much needed chance for CJ and I to stretch our legs and empty our bladders.</p>
 
 ### Leg 6 - KABE to KPWM
 

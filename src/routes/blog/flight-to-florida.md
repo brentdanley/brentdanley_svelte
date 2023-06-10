@@ -1,6 +1,6 @@
 ---
 title: Flight to Florida in CJs Cessna Cardinal
-date: 2023-05-21
+date: 2023-06-10
 tags: [flying, flight, aviation, adventure]
 ---
 
@@ -11,6 +11,42 @@ tags: [flying, flight, aviation, adventure]
 
 <AdventureMap tracks={[ { kml: 'tracklog_20230511_kpwm-kesn.kml', color: 'hsl(203, 41%, 61%)' }, { kml: 'tracklog_20230511_kesn-kgrd.kml', color: 'hsl(203, 41%, 21%)' }, { kml: 'tracklog_20230511_kgrd-kpns.kml', color: 'hsl(203, 41%, 41%)' }, { kml: 'tracklog_20230513_kpns-khky.kml', color: 'hsl(203, 41%, 71%)' }, { kml: 'tracklog_20230513_khky-kabe.kml', color: 'hsl(203, 41%, 31%)' }, { kml: 'tracklog_20230513_kabe-kpwm.kml', color: 'hsl(203, 41%, 51%)' } ]} points={[ { lat: 43.649715, lng: -70.308067, label: 'KPWM' }, { lat: 38.80735, lng: -76.066994, label: 'KESN' }, { lat: 34.246702, lng: -82.153227, label: 'KGRD' }, { lat: 30.467723, lng: -87.183137, label: 'KPNS' }, { lat: 35.74484, lng: -81.381532, label: 'KHKY' }, { lat: 40.64898, lng: -75.441704, label: 'KABE' } ]} />
 
-<FlickrPhotoset photoset_id="72177720308442527" />
+<p>A few weeks ago a friend invited me to copilot his Cessna Cardinal to Florida. His little brother was getting his wings in the Marine Corps and we were going to fly down for the ceremony. I was excited to hang out with CJ and do some serious cross-country flying. Normally I fly for an hour or two at a time, but this trip would be 10 hours each way.</p>
 
-Brent
+<p>We knew based on our preflight planning that the Cardinal would fly around four hours on available fuel. We would need to stop at least twice each way. We planned to stop in Maryland and South Carolina on the way down, and North Carolina and Pennsylvania on the way back. We would be flying from Maine to Florida and back in three days!</p>
+
+### Leg 1
+
+<p>On the trip down flew directly over JFK and got to see a 747 fly directly underneath us, and then a bit later heard ATC mention a flight of four Boeing 767s. As we'd guessed, they were KC-46 Pegasus aircraft flying in formation. It was a pretty cool sight.</p>
+
+<p>We had breakfast at the Sugar Buns Airport Cafe and Bakery on the airport where we first stopped for fuel in Maryland. Perhaps the coolest part of the stop was the Jeep-looking golf cart we borrowed to drive to the cafe. Check it out in the photo gallery below.</p>
+
+### Leg 2
+
+<p>The fuel stop in South Carolina was pretty uneventful. We were only one the ground long enough to use the bathroom and get some snacks and fuel. We were back in the air in less than 30 minutes. They did have a yellow Stearman biplane in the pattern, so that was fun.</p>
+
+<p>CJ's Cardinal is a joy to fly. It's super roomy and comfortable, and it has an autopilot for the roll axis. This meant that for the legs I flew, most of the work was simply making micro-adjustments to the elevator trim and changing the radio frequency as controllers handed us off from one sector to the next.</p>
+
+### Leg 3
+
+<p>I flew the second leg of the trip down, from Maryland to South Carolina. CJ flew us on to Pensacola.</p>
+
+<p>Hanging out with CJs family was a blast. They're super fun, kind, and generous. Great conversation about all sorts of flying, mostly helicopters. And plenty of laughs and great food.</p>
+
+### Leg 4
+
+<p>We flew back to Maine on Sunday. The first leg was from Florida to North Carolina. We stopped at Hickory Regional Airport (KHKY) in North Carolina that had a great little cafe. The food was delicious and the staff were super friendly. The coolest part of the little airport was their outdoor aviation museum. Go check it out on Google Maps.</p>
+
+### Leg 5
+
+<p>I flew the first and third legs on the way back. There were some storms along the way, which provided me the thrill of flying in actual instrument conditions, which I'd never done. It was so cool to punch into the clouds and suddently get tossed about, just to pop out the other side and see the sun shining. I was glad to have the autopilot for those legs, because it was a lot of work to keep the plane level and on course.</p>
+
+<p>Our last stop of the trip, in Pennsylvania, was uneventful. No cafe or aviation museum, but a nice airport and much needed change for CJ and I to stretch our legs and empty our bladders.</p>
+
+### Leg 6
+
+<p>My trip ended at the Portland Jetport as the sun was very low in the west. CJ continued on to his home airport in Belfast, Maine.</p>
+
+<p>Flying to Florida in a little plane was an experience I will never forget. I am so grateful to CJ for inviting me along. CJ is a super great guy and his family is awesome. Doing that trip made me want to get my instrument rating and plan some longer trips outside of the local area. The utility of a small plane is incredible. I can't wait to do more flying!</p>
+
+<FlickrPhotoset photoset_id="72177720308442527" />

@@ -28,7 +28,7 @@
 		mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
 		map = new mapboxgl.Map({
 			container: mapContainer,
-			style: 'mapbox://styles/mapbox/satellite-v9', // style URL
+			style: 'mapbox://styles/mapbox/satellite-streets-v12', // style URL
 			center: [-77.04, 38.907], // starting position [lng, lat]
 			zoom: 3
 		});

@@ -11,8 +11,8 @@
 		isfamily: number;
 	} | null;
 </script>
-<script lang="ts">
 
+<script lang="ts">
 	import { onMount } from 'svelte';
 	import axios from 'axios';
 
@@ -36,33 +36,39 @@
 		photos = response.data.photoset.photo;
 	});
 
-  let isPopupOpen = false;
-  let selectedPhoto: Photo = null;
+	let isPopupOpen = false;
+	let selectedPhoto: Photo = null;
 
-  function handleOpenPopup(event: CustomEvent<{ photo: Photo }>) {
-    isPopupOpen = true;
-	selectedPhoto = event.detail.photo;
-  }
+	function handleOpenPopup(event: CustomEvent<{ photo: Photo }>) {
+		isPopupOpen = true;
+		selectedPhoto = event.detail.photo;
+	}
 
-  function handleClosePopup() {
-    isPopupOpen = false;
-  }
+	function handleClosePopup() {
+		isPopupOpen = false;
+	}
 </script>
+
+<h2>Photos</h2>
 <div class="photo-wrapper">
-		{#each photos as photo (photo?.id)}
-			<MosaicItem photo={photo} on:openPopup={handleOpenPopup} />
-			{/each}
-		</div>
-		
-		{#if isPopupOpen}
-		<PhotoPopup on:closePopup={handleClosePopup} photo={selectedPhoto} />
-		{/if}
+	{#each photos as photo (photo?.id)}
+		<MosaicItem {photo} on:openPopup={handleOpenPopup} />
+	{/each}
+</div>
+
+{#if isPopupOpen}
+	<PhotoPopup on:closePopup={handleClosePopup} photo={selectedPhoto} />
+{/if}
+
 <style lang="scss">
 	.photo-wrapper {
 		display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust the column width as needed */
-  grid-auto-rows: 1fr; /* Each row has equal height */
-  grid-gap: 10px; /* Adjust the gap between grid items as needed */
+		grid-template-columns: repeat(
+			auto-fill,
+			minmax(200px, 1fr)
+		); /* Adjust the column width as needed */
+		grid-auto-rows: 1fr; /* Each row has equal height */
+		grid-gap: 10px; /* Adjust the gap between grid items as needed */
 	}
 
 	.flickr-photo {
@@ -94,4 +100,3 @@
 		}
 	}
 </style>
-

@@ -35,7 +35,7 @@ tags: [flying, flight, aviation, adventure, cross-country]
 
 ### Leg 4 - KPNS to KHKY
 
-<p>We flew back to Maine on Sunday. The first leg was from Pensacola, Florida to Hickory Regional Airport (KHKY) in North Carolina where we enjoyed breakfast at their little cafe. The food was delicious and the staff were super friendly. The coolest part of the little airport was their outdoor aviation museum. Go check it out on Google Maps.</p>
+<p>We flew back to Maine on Sunday. The first leg was from Pensacola, Florida to Hickory Regional Airport (KHKY) in North Carolina where we enjoyed breakfast at their little cafe. The food was delicious and the staff were super friendly. The coolest part of the little airport was their outdoor aviation museum. Zoom in on the map!</p>
 
 ### Leg 5 - KHKY to KABE
 

@@ -112,4 +112,16 @@ tags: [flying, flight, aviation, adventure, alaska]
 
 <AdventureMap tracks={tracks} points={points} />
 
+### CTAF Areas
+
+### Visual Reporting Points
+
+### FSS
+
+### Links
+
+[Alaska Floats & Skis](https://alaskafloats.com/) - The best floatplane experience in Alaska!
+
+[Blue River Aviation](https://www.blueriveraviation.com/) - Rent a Cessna 172 in Palmer and fly over the nearby glaciers!
+
 <FlickrPhotoset photoset_id="72177720301779365" />

@@ -165,7 +165,6 @@
 
 <style lang="scss">
 	@import 'mapbox-gl/dist/mapbox-gl.css';
-	@import '@fortawesome/fontawesome-free/css/all.min.css';
 
 	#map {
 		position: relative;

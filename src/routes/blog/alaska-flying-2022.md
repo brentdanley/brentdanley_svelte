@@ -78,7 +78,7 @@ tags: [flying, flight, aviation, adventure, alaska]
 
     const points = [
         {
-            label: "Kathy's Cabin",
+            label: "Mom's Cabin",
             lat: 61.615759768335884, 
             lng: -149.57266027404367,
         },
@@ -96,6 +96,16 @@ tags: [flying, flight, aviation, adventure, alaska]
             label: "Fish Lake",
             lat: 62.25069539630341, 
             lng: -150.06692559621044,
+        },
+        {
+            label: "Springer Stables",
+            lat: 61.57177169203703,
+            lng: -149.09123842818076
+        },
+        {
+            label: "Brent's House",
+            lat: 61.17151450501391, 
+            lng: -149.84452678241624
         }
     ]
 </script>

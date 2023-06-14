@@ -7,13 +7,46 @@ tags: [flying, flight, aviation, adventure, cross-country]
 <script>
     import FlickrPhotoset from '$lib/components/FlickrPhotoset.svelte'
     import AdventureMap from '$lib/components/AdventureMap.svelte'
+
+    const tracks = [
+        { 
+            filename: 'tracklog_20230511_kpwm-kesn.kml', 
+            startLabel: 'KPWM',
+            startIcon: 'flight'
+        },
+        { 
+            filename: 'tracklog_20230511_kesn-kgrd.kml',
+            startLabel: 'KESN',
+            startIcon: 'flight'
+        },
+        { 
+            filename: 'tracklog_20230511_kgrd-kpns.kml',
+            startLabel: 'KGRD',
+            startIcon: 'flight'
+        },
+        { 
+            filename: 'tracklog_20230513_kpns-khky.kml',
+            startLabel: 'KPNS',
+            startIcon: 'flight'
+        },
+        { 
+            filename: 'tracklog_20230513_khky-kabe.kml', 
+            startLabel: 'KHKY',
+            startIcon: 'flight'
+        },
+        { 
+            filename: 'tracklog_20230513_kabe-kpwm.kml', 
+            startLabel: 'KABE',
+            startIcon: 'flight'
+        } 
+    ]
 </script>
 
 <p>A few weeks ago my friend CJ invited me to copilot his Cessna Cardinal from Maine to Florida. His little brother was getting his wings in the Marine Corps and we were going to fly down for the ceremony. I was excited to hang out with CJ and his family and do some serious cross-country flying. Normally I fly for an hour or two at a time, but this trip would be 10+ hours each way.</p>
 
 <p>We knew based on our preflight planning that the Cardinal would fly around four hours on full tanks. We would need to stop at least twice each way based on forecasted winds aloft. We planned to stop in Maryland and South Carolina on the way down, and North Carolina and Pennsylvania on the way back. We would be flying from Maine to Florida and back in three days!</p>
 
-<AdventureMap tracks={[ { kml: 'tracklog_20230511_kpwm-kesn.kml' }, { kml: 'tracklog_20230511_kesn-kgrd.kml' }, { kml: 'tracklog_20230511_kgrd-kpns.kml' }, { kml: 'tracklog_20230513_kpns-khky.kml' }, { kml: 'tracklog_20230513_khky-kabe.kml' }, { kml: 'tracklog_20230513_kabe-kpwm.kml' } ]} points={[ { lat: 43.649715, lng: -70.308067, label: 'KPWM' }, { lat: 38.80735, lng: -76.066994, label: 'KESN' }, { lat: 34.246702, lng: -82.153227, label: 'KGRD' }, { lat: 30.467723, lng: -87.183137, label: 'KPNS' }, { lat: 35.74484, lng: -81.381532, label: 'KHKY' }, { lat: 40.64898, lng: -75.441704, label: 'KABE' } ]} />
+<AdventureMap tracks={tracks} />
 
 ### Leg 1 - KPWM to KESN
 

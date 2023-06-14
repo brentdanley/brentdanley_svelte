@@ -1,13 +1,19 @@
 <script context="module" lang="ts">
+	export type Activities = 'pin' | 'hike' | 'bike' | 'paddle' | 'flight';
 	export type Track = {
-		kml: string;
+		filename: string;
 		color?: string;
+		startLabel?: string;
+		endLabel?: string;
+		startIcon?: Activities;
+		endIcon?: Activities;
 	};
 
 	export type Point = {
 		lat: number;
 		lng: number;
 		label: string;
+		type?: Activities;
 	};
 </script>
 
@@ -22,9 +28,43 @@
 
 	let mapContainer: HTMLElement;
 	let map: mapboxgl.Map;
+	let bounds = new mapboxgl.LngLatBounds();
 
+	const addMarkerToMap = ({ lat, lng, label, type }: Point) => {
+		// Create a DOM element for the marker and put in it the icon
+		const el = document.createElement('div');
+		const icons = {
+			pin: 'fas fa-location-pin',
+			hike: 'fas fa-person-hiking',
+			bike: 'fas fa-biking',
+			paddle: 'fas fa-kayak',
+			flight: 'fas fa-plane'
+		};
+		const icon = icons[type ?? 'pin'];
+		el.className = 'marker';
+		el.innerHTML = `<i class="${icon}" style="color: white; font-size: 2rem; background-color: var(--dark-font-color); border-radius: 50%; height: 2em; width: 2em; display: flex; align-items: center; justify-content: center; border: 2px solid white;"></i>`;
+
+		el.style.display = 'flex';
+		el.style.flexDirection = 'column';
+		el.style.alignContent = 'center';
+		el.style.justifyContent = 'center';
+		el.style.textAlign = 'center';
+
+		// Create a DOM element for the marker label
+		const markerLabel = document.createElement('div');
+		markerLabel.className = 'marker-label';
+		markerLabel.textContent = label;
+
+		// Create the map marker and add the label element to it
+		const marker = new mapboxgl.Marker({ element: el }).setLngLat([lng, lat]).addTo(map);
+
+		// Add the label element to the map marker
+		marker.getElement().appendChild(markerLabel);
+
+		// Extend bounds to include the point
+		bounds.extend([lng, lat]);
+	};
 	onMount(async () => {
-		let bounds = new mapboxgl.LngLatBounds();
 		mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
 		map = new mapboxgl.Map({
 			container: mapContainer,
@@ -36,11 +76,39 @@
 		map.on('load', async () => {
 			for (let i = 0; i < tracks.length; i++) {
 				const track = tracks[i];
-				const response = await axios.get(`/tracklogs/${track.kml}`);
+				const response = await axios.get(`/tracklogs/${track.filename}`);
 				const parser = new DOMParser();
-				const kml = parser.parseFromString(response.data, 'application/xml');
-				const converted = ts.kml(kml);
+				const fileExtension = track.filename.slice(-3); // get the last three characters of the filename
+				const parsedTrack = parser.parseFromString(response.data, 'application/xml');
+				let converted;
 
+				if (fileExtension === 'kml') {
+					converted = ts.kml(parsedTrack);
+				} else if (fileExtension === 'gpx') {
+					converted = ts.gpx(parsedTrack);
+				} else {
+					console.error(`Unsupported file extension: ${fileExtension}`);
+					continue;
+				}
+				const trackCoordinates = converted?.features?.[0].geometry?.coordinates;
+				if (track.startLabel) {
+					const startPoint: Point = {
+						lat: trackCoordinates[0][1],
+						lng: trackCoordinates[0][0],
+						label: track.startLabel,
+						type: track.startIcon
+					};
+					addMarkerToMap(startPoint);
+				}
+				if (track.endLabel) {
+					const startPoint: Point = {
+						lat: trackCoordinates[trackCoordinates.length - 1][1],
+						lng: trackCoordinates[trackCoordinates.length - 1][0],
+						label: track.endLabel ?? '',
+						type: track.endIcon
+					};
+					addMarkerToMap(startPoint);
+				}
 				const featuresWithGeometry = converted.features.filter(
 					(feature) => feature.geometry !== null
 				);
@@ -79,28 +147,8 @@
 				});
 			}
 
-			// add markers for each point
-			points.forEach(({ lat, lng, label }) => {
-				// Create a DOM element for the marker and put in it the icon
-				const el = document.createElement('div');
-				el.className = 'marker';
-				el.innerHTML = '<img src="/airfield.svg" alt="airfield marker" />';
-
-				// Create a DOM element for the marker label
-				const markerLabel = document.createElement('div');
-				markerLabel.className = 'marker-label';
-				markerLabel.textContent = label;
-
-				// Create the map marker and add the label element to it
-				const marker = new mapboxgl.Marker({ color: '#ff0000', element: el })
-					.setLngLat([lng, lat])
-					.addTo(map);
-
-				// Add the label element to the map marker
-				marker.getElement().appendChild(markerLabel);
-
-				// Extend bounds to include the point
-				bounds.extend([lng, lat]);
+			points.forEach((point) => {
+				addMarkerToMap(point);
 			});
 
 			// Set map to fit the bounds of all tracks
@@ -117,6 +165,7 @@
 
 <style lang="scss">
 	@import 'mapbox-gl/dist/mapbox-gl.css';
+	@import '@fortawesome/fontawesome-free/css/all.min.css';
 
 	#map {
 		position: relative;
@@ -124,10 +173,5 @@
 		aspect-ratio: 4 / 3;
 		max-width: 800px;
 		margin: 2rem auto;
-	}
-
-	.marker-label {
-		font-size: 1.5rem;
-		max-width: 200px;
 	}
 </style>

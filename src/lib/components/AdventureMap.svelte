@@ -132,7 +132,7 @@
 						'line-cap': 'round'
 					},
 					paint: {
-						'line-color': track.color ? track.color : 'hsl(203, 41%, 51%)', // Color from track object
+						'line-color': track.color ? track.color : 'magenta', // Color from track object
 						'line-width': 4
 					}
 				});
@@ -171,7 +171,6 @@
 		position: relative;
 		width: 100%;
 		aspect-ratio: 4 / 3;
-		max-width: 800px;
 		margin: 2rem auto;
 	}
 </style>

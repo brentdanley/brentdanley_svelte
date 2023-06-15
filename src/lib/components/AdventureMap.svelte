@@ -154,6 +154,9 @@
 			// Set map to fit the bounds of all tracks
 			map.fitBounds(bounds, { padding: 80 });
 		});
+
+		// Add custom controls to map
+		map.addControl(new mapboxgl.NavigationControl({ visualizePitch: true }), 'top-right');
 	});
 
 	onDestroy(() => {

@@ -103,9 +103,38 @@ tags: [flying, flight, aviation, adventure, alaska]
             lng: -149.09123842818076
         },
         {
-            label: "Brent's House",
+            label: "2005 Tudor Hills Court",
             lat: 61.17151450501391, 
-            lng: -149.84452678241624
+            lng: -149.84452678241624,
+        },
+        {
+            label: "2010 Tudor Hills Drive",
+            lat: 61.17165979366806,
+            lng: -149.8453142055231,
+        },
+        {
+            label: "Colony Glacier",
+            lat: 61.239444400000004,
+            lng: -148.5075,
+            type: "photo",
+        },
+        {
+            label: "Knik Glacier",
+            lng: -148.2986111,
+            lat: 61.3675,
+            type: "photo",
+        },
+        {
+            label: "Matanuska Glacier",
+            lng: -147.5811111,
+            lat: 61.6558333,
+            type: "photo",
+        },
+        {
+            label: "Talkeetna Alaska Teleport",
+            lat: 62.332909734155294, 
+            lng: -150.03225988465874,
+            type: "photo",
         }
     ]
 </script>

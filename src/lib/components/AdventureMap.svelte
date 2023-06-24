@@ -1,5 +1,5 @@
 <script context="module" lang="ts">
-	export type Activities = 'pin' | 'hike' | 'bike' | 'paddle' | 'flight';
+	export type Activities = 'pin' | 'hike' | 'bike' | 'paddle' | 'flight' | 'photo';
 	export type Track = {
 		filename: string;
 		color?: string;
@@ -37,8 +37,9 @@
 			pin: 'fas fa-location-pin',
 			hike: 'fas fa-person-hiking',
 			bike: 'fas fa-biking',
-			paddle: 'fas fa-kayak',
-			flight: 'fas fa-plane'
+			paddle: 'fa-solid fa-sailboat',
+			flight: 'fas fa-plane',
+			photo: 'fa-solid fa-camera'
 		};
 		const icon = icons[type ?? 'pin'];
 		el.className = 'marker';

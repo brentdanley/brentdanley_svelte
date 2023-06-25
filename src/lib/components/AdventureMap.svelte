@@ -39,7 +39,8 @@
 			bike: 'fas fa-biking',
 			paddle: 'fa-solid fa-sailboat',
 			flight: 'fas fa-plane',
-			photo: 'fa-solid fa-camera'
+			photo: 'fa-solid fa-camera',
+			boat: 'fa-solid fa-sailboat'
 		};
 		const icon = icons[type ?? 'pin'];
 		el.className = 'marker';

@@ -1,5 +1,4 @@
-import fs from 'fs';
-import path from 'path';
+import data from './data/pilot_logbook.json';
 
 interface LogbookResponse {
 	status: number;
@@ -14,13 +13,6 @@ interface LogbookResponse {
 
 export async function GET(): Promise<LogbookResponse> {
 	try {
-		// Read JSON file
-		const filePath = path.resolve('./pilot_logbook.json');
-
-		console.log(filePath);
-		const rawData = fs.readFileSync(filePath, 'utf8');
-		const data = JSON.parse(rawData);
-
 		const groupedDataObject = data.reduce((acc: any, cur: any) => {
 			const year = cur.date.split('-')[0];
 			const flightHours = parseFloat(cur.flight_hours); // Make sure it's a number

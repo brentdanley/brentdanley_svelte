@@ -22,3 +22,6 @@
 	or on
 	<a href="https://www.linkedin.com/in/brentdanley/" title="LinkedIn">LinkedIn</a>.
 </p>
+<p>
+	Check out my <a href="pilot-logbook" title="Pilot Logbook">Pilot Logbook</a>.
+</p>

@@ -42,8 +42,11 @@
 		"@fortawesome/free-solid-svg-icons": "^6.2.1",
 		"@tmcw/togeojson": "^5.6.1",
 		"axios": "^1.4.0",
+		"chart.js": "^4.4.0",
 		"date-fns": "^2.29.3",
 		"mapbox-gl": "^2.15.0",
+		"sqlite": "^5.0.1",
+		"sqlite3": "^5.1.6",
 		"svelte-fa": "^3.0.3"
 	}
 }

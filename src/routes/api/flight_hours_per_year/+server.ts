@@ -15,7 +15,7 @@ interface LogbookResponse {
 export async function GET(): Promise<LogbookResponse> {
 	// Open the SQLite database; adjust the path as necessary
 	const db = await open({
-		filename: './pilot_logbook.db',
+		filename: 'static/pilot_logbook.db',
 		driver: sqlite3.Database
 	});
 

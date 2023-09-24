@@ -14,7 +14,7 @@ interface LogbookResponse {
 
 export async function GET(): Promise<LogbookResponse> {
 	// Read JSON file
-	const filePath = path.resolve('./static/data/pilot_logbook.json');
+	const filePath = path.resolve('/static/data/pilot_logbook.json');
 	const rawData = fs.readFileSync(filePath, 'utf8');
 	const data = JSON.parse(rawData);
 

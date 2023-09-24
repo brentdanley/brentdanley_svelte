@@ -1,0 +1,1374 @@
+[
+    {
+        "date": "2023-09-21",
+        "aircraft_registration": "N8181N",
+        "departure_airport": "KLEW",
+        "arrival_airport": "KPWM",
+        "flight_hours": 0.6
+    },
+    {
+        "date": "2023-09-04",
+        "aircraft_registration": "N8181N",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 2.4
+    },
+    {
+        "date": "2023-09-03",
+        "aircraft_registration": "N8181N",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.9
+    },
+    {
+        "date": "2023-08-26",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.9
+    },
+    {
+        "date": "2023-08-24",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 2.5
+    },
+    {
+        "date": "2023-08-23",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 0.6
+    },
+    {
+        "date": "2023-08-11",
+        "aircraft_registration": "N1562A",
+        "departure_airport": "AK8",
+        "arrival_airport": "AK8",
+        "flight_hours": 2.0
+    },
+    {
+        "date": "2023-08-10",
+        "aircraft_registration": "N98120",
+        "departure_airport": "PAAQ",
+        "arrival_airport": "PAAQ",
+        "flight_hours": 1.7
+    },
+    {
+        "date": "2023-08-08",
+        "aircraft_registration": "N7347D",
+        "departure_airport": "AK8",
+        "arrival_airport": "AK8",
+        "flight_hours": 1.2
+    },
+    {
+        "date": "2023-08-06",
+        "aircraft_registration": "N4714F",
+        "departure_airport": "PAAQ",
+        "arrival_airport": "PAAQ",
+        "flight_hours": 0.5
+    },
+    {
+        "date": "2023-08-02",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 2.3
+    },
+    {
+        "date": "2023-08-01",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 0.8
+    },
+    {
+        "date": "2023-07-20",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.7
+    },
+    {
+        "date": "2023-06-09",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 0.6
+    },
+    {
+        "date": "2023-06-09",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.1
+    },
+    {
+        "date": "2023-06-07",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.0
+    },
+    {
+        "date": "2023-06-06",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.2
+    },
+    {
+        "date": "2023-06-02",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.4
+    },
+    {
+        "date": "2023-05-23",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 0.9
+    },
+    {
+        "date": "2023-05-13",
+        "aircraft_registration": "N3489T",
+        "departure_airport": "KABE",
+        "arrival_airport": "KPWM",
+        "flight_hours": 3.2
+    },
+    {
+        "date": "2023-05-13",
+        "aircraft_registration": "N3489T",
+        "departure_airport": "KHKY",
+        "arrival_airport": "KABE",
+        "flight_hours": 3.8
+    },
+    {
+        "date": "2023-05-11",
+        "aircraft_registration": "N3489T",
+        "departure_airport": "KESN",
+        "arrival_airport": "KGRD",
+        "flight_hours": 4.4
+    },
+    {
+        "date": "2023-05-06",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "7B2",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.7
+    },
+    {
+        "date": "2023-05-06",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "7B2",
+        "flight_hours": 1.6
+    },
+    {
+        "date": "2023-04-21",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KBXM",
+        "arrival_airport": "8B0",
+        "flight_hours": 0.9
+    },
+    {
+        "date": "2023-04-21",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KBXM",
+        "flight_hours": 0.5
+    },
+    {
+        "date": "2023-04-21",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "8B0",
+        "arrival_airport": "KPWM",
+        "flight_hours": 0.9
+    },
+    {
+        "date": "2023-04-20",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.2
+    },
+    {
+        "date": "2023-04-15",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 0.9
+    },
+    {
+        "date": "2023-04-14",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "7B3",
+        "flight_hours": 0.7
+    },
+    {
+        "date": "2023-04-14",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "7B3",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.3
+    },
+    {
+        "date": "2023-04-08",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KSFM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.9
+    },
+    {
+        "date": "2023-04-08",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KSFM",
+        "flight_hours": 0.4
+    },
+    {
+        "date": "2022-12-21",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.5
+    },
+    {
+        "date": "2022-12-13",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 2.7
+    },
+    {
+        "date": "2022-12-09",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.1
+    },
+    {
+        "date": "2022-12-09",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 0.5
+    },
+    {
+        "date": "2022-11-26",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KEEN",
+        "flight_hours": 1.5
+    },
+    {
+        "date": "2022-11-23",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.3
+    },
+    {
+        "date": "2022-10-30",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 0.7
+    },
+    {
+        "date": "2022-09-10",
+        "aircraft_registration": "N8181N",
+        "departure_airport": "KPWM",
+        "arrival_airport": "3B1",
+        "flight_hours": 1.5
+    },
+    {
+        "date": "2022-09-10",
+        "aircraft_registration": "N8181N",
+        "departure_airport": "3B1",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.3
+    },
+    {
+        "date": "2022-08-30",
+        "aircraft_registration": "N7347D",
+        "departure_airport": "AK8",
+        "arrival_airport": "AK8",
+        "flight_hours": 0.4
+    },
+    {
+        "date": "2022-08-30",
+        "aircraft_registration": "N7347D",
+        "departure_airport": "AK8",
+        "arrival_airport": "AK8",
+        "flight_hours": 1.5
+    },
+    {
+        "date": "2022-08-30",
+        "aircraft_registration": "N7347D",
+        "departure_airport": "AK8",
+        "arrival_airport": "AK8",
+        "flight_hours": 0.7
+    },
+    {
+        "date": "2022-08-29",
+        "aircraft_registration": "N3321B",
+        "departure_airport": "AK8",
+        "arrival_airport": "AK8",
+        "flight_hours": 1.1
+    },
+    {
+        "date": "2022-08-29",
+        "aircraft_registration": "N7347D",
+        "departure_airport": "AK8",
+        "arrival_airport": "AK8",
+        "flight_hours": 1.3
+    },
+    {
+        "date": "2022-08-28",
+        "aircraft_registration": "N3321B",
+        "departure_airport": "AK8",
+        "arrival_airport": "AK8",
+        "flight_hours": 1.4
+    },
+    {
+        "date": "2022-08-28",
+        "aircraft_registration": "N3321B",
+        "departure_airport": "AK8",
+        "arrival_airport": "AK8",
+        "flight_hours": 1.1
+    },
+    {
+        "date": "2022-08-27",
+        "aircraft_registration": "N3321B",
+        "departure_airport": "AK8",
+        "arrival_airport": "AK8",
+        "flight_hours": 1.5
+    },
+    {
+        "date": "2022-08-27",
+        "aircraft_registration": "N3321B",
+        "departure_airport": "AK8",
+        "arrival_airport": "AK8",
+        "flight_hours": 1.1
+    },
+    {
+        "date": "2022-08-23",
+        "aircraft_registration": "N6164F",
+        "departure_airport": "PAAQ",
+        "arrival_airport": "PAAQ",
+        "flight_hours": 1.3
+    },
+    {
+        "date": "2022-08-21",
+        "aircraft_registration": "N4714F",
+        "departure_airport": "PAAQ",
+        "arrival_airport": "PAAQ",
+        "flight_hours": 1.1
+    },
+    {
+        "date": "2022-08-21",
+        "aircraft_registration": "N98120",
+        "departure_airport": "PAAQ",
+        "arrival_airport": "PAAQ",
+        "flight_hours": 1.1
+    },
+    {
+        "date": "2022-08-13",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KAFN",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.4
+    },
+    {
+        "date": "2022-08-13",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KAFN",
+        "flight_hours": 1.4
+    },
+    {
+        "date": "2022-08-04",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 0.9
+    },
+    {
+        "date": "2022-07-20",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KBXM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.0
+    },
+    {
+        "date": "2022-07-20",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KBXM",
+        "flight_hours": 0.6
+    },
+    {
+        "date": "2022-06-12",
+        "aircraft_registration": "N8181N",
+        "departure_airport": "KRUT",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.5
+    },
+    {
+        "date": "2022-06-12",
+        "aircraft_registration": "N8181N",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KRUT",
+        "flight_hours": 1.6
+    },
+    {
+        "date": "2022-06-01",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.0
+    },
+    {
+        "date": "2022-05-29",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KBHB",
+        "flight_hours": 1.2
+    },
+    {
+        "date": "2022-05-29",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KBHB",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.8
+    },
+    {
+        "date": "2022-05-27",
+        "aircraft_registration": "N720EC",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.4
+    },
+    {
+        "date": "2022-05-03",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 2.1
+    },
+    {
+        "date": "2022-04-30",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 2.9
+    },
+    {
+        "date": "2022-04-23",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.4
+    },
+    {
+        "date": "2022-04-16",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.0
+    },
+    {
+        "date": "2022-04-15",
+        "aircraft_registration": "N8181N",
+        "departure_airport": "KLEW",
+        "arrival_airport": "KPWM",
+        "flight_hours": 0.6
+    },
+    {
+        "date": "2022-03-29",
+        "aircraft_registration": "N8181N",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 0.7
+    },
+    {
+        "date": "2022-03-29",
+        "aircraft_registration": "N8181N",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KLEW",
+        "flight_hours": 0.4
+    },
+    {
+        "date": "2022-03-29",
+        "aircraft_registration": "N8181N",
+        "departure_airport": "KLEW",
+        "arrival_airport": "KPWM",
+        "flight_hours": 0.4
+    },
+    {
+        "date": "2022-03-27",
+        "aircraft_registration": "N8181N",
+        "departure_airport": "KAUG",
+        "arrival_airport": "KLEW",
+        "flight_hours": 0.7
+    },
+    {
+        "date": "2022-03-26",
+        "aircraft_registration": "N8181N",
+        "departure_airport": "1B0",
+        "arrival_airport": "KLEW",
+        "flight_hours": 1.2
+    },
+    {
+        "date": "2022-03-16",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.0
+    },
+    {
+        "date": "2022-03-10",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "8B0",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.0
+    },
+    {
+        "date": "2022-03-05",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.2
+    },
+    {
+        "date": "2022-03-02",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.1
+    },
+    {
+        "date": "2022-02-27",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KEEN",
+        "flight_hours": 1.7
+    },
+    {
+        "date": "2022-02-27",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KEEN",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.3
+    },
+    {
+        "date": "2022-02-20",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "B18",
+        "flight_hours": 1.0
+    },
+    {
+        "date": "2022-02-20",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "B18",
+        "arrival_airport": "KPWM",
+        "flight_hours": 0.6
+    },
+    {
+        "date": "2022-01-22",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.7
+    },
+    {
+        "date": "2021-12-04",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.3
+    },
+    {
+        "date": "2021-11-23",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "7B2",
+        "flight_hours": 1.5
+    },
+    {
+        "date": "2021-11-23",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "7B2",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.6
+    },
+    {
+        "date": "2021-11-13",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KEEN",
+        "flight_hours": 1.3
+    },
+    {
+        "date": "2021-11-13",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KEEN",
+        "arrival_airport": "KPWM",
+        "flight_hours": 0.9
+    },
+    {
+        "date": "2021-11-13",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KEEN",
+        "arrival_airport": "KASH",
+        "flight_hours": 1.6
+    },
+    {
+        "date": "2021-11-13",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KASH",
+        "arrival_airport": "KEEN",
+        "flight_hours": 0.7
+    },
+    {
+        "date": "2021-10-31",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KEEN",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.4
+    },
+    {
+        "date": "2021-10-31",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KEEN",
+        "flight_hours": 1.2
+    },
+    {
+        "date": "2021-10-21",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.5
+    },
+    {
+        "date": "2021-10-07",
+        "aircraft_registration": "N8181N",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.2
+    },
+    {
+        "date": "2021-10-02",
+        "aircraft_registration": "N8181N",
+        "departure_airport": "KBHB",
+        "arrival_airport": "KPWM",
+        "flight_hours": 2.0
+    },
+    {
+        "date": "2021-10-02",
+        "aircraft_registration": "N8181N",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KBHB",
+        "flight_hours": 1.6
+    },
+    {
+        "date": "2021-09-30",
+        "aircraft_registration": "N8181N",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KEEN",
+        "flight_hours": 1.4
+    },
+    {
+        "date": "2021-09-30",
+        "aircraft_registration": "N8181N",
+        "departure_airport": "KEEN",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.9
+    },
+    {
+        "date": "2021-09-28",
+        "aircraft_registration": "N8181N",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.4
+    },
+    {
+        "date": "2021-09-26",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.5
+    },
+    {
+        "date": "2021-09-11",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KEEN",
+        "flight_hours": 1.1
+    },
+    {
+        "date": "2021-09-11",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KEEN",
+        "arrival_airport": "KEEN",
+        "flight_hours": 1.3
+    },
+    {
+        "date": "2021-09-11",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KEEN",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.2
+    },
+    {
+        "date": "2021-09-10",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.8
+    },
+    {
+        "date": "2021-09-06",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.2
+    },
+    {
+        "date": "2021-09-02",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 2.3
+    },
+    {
+        "date": "2021-09-01",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.2
+    },
+    {
+        "date": "2021-03-27",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 3.0
+    },
+    {
+        "date": "2021-02-28",
+        "aircraft_registration": "N4818D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.4
+    },
+    {
+        "date": "2019-11-10",
+        "aircraft_registration": "N9946Q",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.5
+    },
+    {
+        "date": "2019-11-10",
+        "aircraft_registration": "N9946Q",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 0.6
+    },
+    {
+        "date": "2019-07-05",
+        "aircraft_registration": "N73898",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.3
+    },
+    {
+        "date": "2019-05-27",
+        "aircraft_registration": "N73898",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.9
+    },
+    {
+        "date": "2019-05-15",
+        "aircraft_registration": "N73898",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.3
+    },
+    {
+        "date": "2019-04-07",
+        "aircraft_registration": "N73898",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.9
+    },
+    {
+        "date": "2019-03-27",
+        "aircraft_registration": "N9946Q",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.0
+    },
+    {
+        "date": "2016-04-24",
+        "aircraft_registration": "N73898",
+        "departure_airport": "KPWM",
+        "arrival_airport": "KPWM",
+        "flight_hours": 1.7
+    },
+    {
+        "date": "2015-04-05",
+        "aircraft_registration": "N9946Q",
+        "departure_airport": "PWM",
+        "arrival_airport": "PWM",
+        "flight_hours": 2.4
+    },
+    {
+        "date": "2014-10-19",
+        "aircraft_registration": "N9946Q",
+        "departure_airport": "PWM",
+        "arrival_airport": "PWM",
+        "flight_hours": 1.9
+    },
+    {
+        "date": "2014-10-13",
+        "aircraft_registration": "N9946Q",
+        "departure_airport": "PWM",
+        "arrival_airport": "BWM",
+        "flight_hours": 2.1
+    },
+    {
+        "date": "2014-10-12",
+        "aircraft_registration": "N9946Q",
+        "departure_airport": "PWM",
+        "arrival_airport": "PWM",
+        "flight_hours": 1.0
+    },
+    {
+        "date": "2014-03-29",
+        "aircraft_registration": "N73898",
+        "departure_airport": "SFM",
+        "arrival_airport": "SFM",
+        "flight_hours": 2.1
+    },
+    {
+        "date": "2014-03-23",
+        "aircraft_registration": "N916BA",
+        "departure_airport": "SFM",
+        "arrival_airport": "SFM",
+        "flight_hours": 1.2
+    },
+    {
+        "date": "2011-10-28",
+        "aircraft_registration": "N6194D",
+        "departure_airport": "KPWM",
+        "arrival_airport": "PWM",
+        "flight_hours": 1.2
+    },
+    {
+        "date": "2011-10-09",
+        "aircraft_registration": "N739JW",
+        "departure_airport": "KPWM",
+        "arrival_airport": "PWM",
+        "flight_hours": 2.2
+    },
+    {
+        "date": "2011-10-08",
+        "aircraft_registration": "N739JW",
+        "departure_airport": "KPWM",
+        "arrival_airport": "PWM",
+        "flight_hours": 1.6
+    },
+    {
+        "date": "2011-10-08",
+        "aircraft_registration": "N739JW",
+        "departure_airport": "KPWM",
+        "arrival_airport": "PWM",
+        "flight_hours": 0.7
+    },
+    {
+        "date": "2011-06-17",
+        "aircraft_registration": "N739JW",
+        "departure_airport": "KPWM",
+        "arrival_airport": "PWM",
+        "flight_hours": 1.1
+    },
+    {
+        "date": "2011-06-06",
+        "aircraft_registration": "N739JW",
+        "departure_airport": "KPWM",
+        "arrival_airport": "PWM",
+        "flight_hours": 1.5
+    },
+    {
+        "date": "2011-06-05",
+        "aircraft_registration": "N739JW",
+        "departure_airport": "KPWM",
+        "arrival_airport": "PWM",
+        "flight_hours": 1.5
+    },
+    {
+        "date": "2011-06-04",
+        "aircraft_registration": "N739JW",
+        "departure_airport": "KPWM",
+        "arrival_airport": "PWM",
+        "flight_hours": 1.6
+    },
+    {
+        "date": "2005-07-09",
+        "aircraft_registration": "N7867U",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 1.6
+    },
+    {
+        "date": "2005-06-17",
+        "aircraft_registration": "N73743",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 2.0
+    },
+    {
+        "date": "2005-06-12",
+        "aircraft_registration": "N73743",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 1.6
+    },
+    {
+        "date": "2005-06-11",
+        "aircraft_registration": "N7867U",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 1.1
+    },
+    {
+        "date": "2005-05-16",
+        "aircraft_registration": "N7867U",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 1.3
+    },
+    {
+        "date": "2005-05-15",
+        "aircraft_registration": "N7867U",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 1.0
+    },
+    {
+        "date": "2005-05-14",
+        "aircraft_registration": "N73743",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 1.4
+    },
+    {
+        "date": "2005-05-08",
+        "aircraft_registration": "N75567",
+        "departure_airport": "1K1",
+        "arrival_airport": "1K1",
+        "flight_hours": 0.8
+    },
+    {
+        "date": "1999-10-09",
+        "aircraft_registration": "N714BB",
+        "departure_airport": "3AU",
+        "arrival_airport": "3AU",
+        "flight_hours": 1.8
+    },
+    {
+        "date": "1999-09-18",
+        "aircraft_registration": "N4494X",
+        "departure_airport": "3AU",
+        "arrival_airport": "3AU",
+        "flight_hours": 1.4
+    },
+    {
+        "date": "1999-08-19",
+        "aircraft_registration": "N4494X",
+        "departure_airport": "3AU",
+        "arrival_airport": "3AU",
+        "flight_hours": 2.0
+    },
+    {
+        "date": "1999-07-23",
+        "aircraft_registration": "N4494X",
+        "departure_airport": "3AU",
+        "arrival_airport": "3AU",
+        "flight_hours": 2.8
+    },
+    {
+        "date": "1999-07-17",
+        "aircraft_registration": "N4494X",
+        "departure_airport": "3AU",
+        "arrival_airport": "3AU",
+        "flight_hours": 1.8
+    },
+    {
+        "date": "1999-07-16",
+        "aircraft_registration": "N714BB",
+        "departure_airport": "3AU",
+        "arrival_airport": "3AU",
+        "flight_hours": 1.0
+    },
+    {
+        "date": "1999-07-01",
+        "aircraft_registration": "N4494X",
+        "departure_airport": "3AU",
+        "arrival_airport": "3AU",
+        "flight_hours": 1.0
+    },
+    {
+        "date": "1999-05-26",
+        "aircraft_registration": "N5086G",
+        "departure_airport": "ORL",
+        "arrival_airport": "ORL",
+        "flight_hours": 1.3
+    },
+    {
+        "date": "1999-05-26",
+        "aircraft_registration": "N5086G",
+        "departure_airport": "ORL",
+        "arrival_airport": "ORL",
+        "flight_hours": 1.4
+    },
+    {
+        "date": "1999-05-19",
+        "aircraft_registration": "N714BB",
+        "departure_airport": "3AU",
+        "arrival_airport": "3AU",
+        "flight_hours": 2.0
+    },
+    {
+        "date": "1999-05-08",
+        "aircraft_registration": "N714BB",
+        "departure_airport": "3AU",
+        "arrival_airport": "3AU",
+        "flight_hours": 2.4
+    },
+    {
+        "date": "1999-04-19",
+        "aircraft_registration": "N73743",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 1.6
+    },
+    {
+        "date": "1999-03-03",
+        "aircraft_registration": "N714BB",
+        "departure_airport": "3AU",
+        "arrival_airport": "3AU",
+        "flight_hours": 1.9
+    },
+    {
+        "date": "1999-02-15",
+        "aircraft_registration": "N5990E",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 1.4
+    },
+    {
+        "date": "1999-02-13",
+        "aircraft_registration": "N714BB",
+        "departure_airport": "3AU",
+        "arrival_airport": "3AU",
+        "flight_hours": 1.0
+    },
+    {
+        "date": "1999-02-10",
+        "aircraft_registration": "N5990E",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 0.4
+    },
+    {
+        "date": "1999-02-09",
+        "aircraft_registration": "N1141K",
+        "departure_airport": "KSSF",
+        "arrival_airport": "KAAO",
+        "flight_hours": 3.7
+    },
+    {
+        "date": "1999-02-08",
+        "aircraft_registration": "N1141K",
+        "departure_airport": "AAO",
+        "arrival_airport": "SSF",
+        "flight_hours": 4.8
+    },
+    {
+        "date": "1999-01-19",
+        "aircraft_registration": "N5990E",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 1.9
+    },
+    {
+        "date": "1998-11-05",
+        "aircraft_registration": "N5990E",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 1.0
+    },
+    {
+        "date": "1998-10-19",
+        "aircraft_registration": "N177ER",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 1.0
+    },
+    {
+        "date": "1998-10-17",
+        "aircraft_registration": "N733RK",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 1.4
+    },
+    {
+        "date": "1998-10-12",
+        "aircraft_registration": "N5556S",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 2.1
+    },
+    {
+        "date": "1998-10-10",
+        "aircraft_registration": "N5990E",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 2.2
+    },
+    {
+        "date": "1998-10-07",
+        "aircraft_registration": "N5990E",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 1.2
+    },
+    {
+        "date": "1998-10-07",
+        "aircraft_registration": "N73743",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 1.7
+    },
+    {
+        "date": "1998-10-07",
+        "aircraft_registration": "N5990E",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 0.7
+    },
+    {
+        "date": "1998-09-24",
+        "aircraft_registration": "N733RK",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 0.9
+    },
+    {
+        "date": "1998-09-19",
+        "aircraft_registration": "N73743",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 1.8
+    },
+    {
+        "date": "1998-09-18",
+        "aircraft_registration": "N5990E",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 2.9
+    },
+    {
+        "date": "1998-09-12",
+        "aircraft_registration": "N733RK",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 1.5
+    },
+    {
+        "date": "1998-09-07",
+        "aircraft_registration": "N5990E",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 2.5
+    },
+    {
+        "date": "1998-09-05",
+        "aircraft_registration": "N5990E",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 2.2
+    },
+    {
+        "date": "1998-08-29",
+        "aircraft_registration": "N733RK",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 1.9
+    },
+    {
+        "date": "1998-08-27",
+        "aircraft_registration": "N733RK",
+        "departure_airport": "PNC",
+        "arrival_airport": "AAO",
+        "flight_hours": 1.0
+    },
+    {
+        "date": "1998-08-27",
+        "aircraft_registration": "N733RK",
+        "departure_airport": "AAO",
+        "arrival_airport": "PNC",
+        "flight_hours": 1.1
+    },
+    {
+        "date": "1998-08-26",
+        "aircraft_registration": "N733RK",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 0.7
+    },
+    {
+        "date": "1998-08-25",
+        "aircraft_registration": "N733RK",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 1.5
+    },
+    {
+        "date": "1998-08-21",
+        "aircraft_registration": "N5556S",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 2.2
+    },
+    {
+        "date": "1998-08-15",
+        "aircraft_registration": "N5556S",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 1.7
+    },
+    {
+        "date": "1998-08-14",
+        "aircraft_registration": "N5990E",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 1.9
+    },
+    {
+        "date": "1998-08-10",
+        "aircraft_registration": "N73743",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 0.4
+    },
+    {
+        "date": "1998-08-08",
+        "aircraft_registration": "N73743",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 0.5
+    },
+    {
+        "date": "1998-08-08",
+        "aircraft_registration": "N733RK",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 1.4
+    },
+    {
+        "date": "1998-08-07",
+        "aircraft_registration": "N733RK",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 1.1
+    },
+    {
+        "date": "1998-08-04",
+        "aircraft_registration": "N5556S",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 1.3
+    },
+    {
+        "date": "1998-08-03",
+        "aircraft_registration": "N5556S",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 0.9
+    },
+    {
+        "date": "1998-07-30",
+        "aircraft_registration": "N5556S",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 1.6
+    },
+    {
+        "date": "1998-07-23",
+        "aircraft_registration": "N733RK",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 1.7
+    },
+    {
+        "date": "1998-07-18",
+        "aircraft_registration": "N733RK",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 1.7
+    },
+    {
+        "date": "1998-07-11",
+        "aircraft_registration": "N733RK",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 2.1
+    },
+    {
+        "date": "1998-07-06",
+        "aircraft_registration": "N5990E",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 1.4
+    },
+    {
+        "date": "1998-06-30",
+        "aircraft_registration": "N5990E",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 1.5
+    },
+    {
+        "date": "1998-06-28",
+        "aircraft_registration": "N733RK",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 1.3
+    },
+    {
+        "date": "1998-06-26",
+        "aircraft_registration": "N5990E",
+        "departure_airport": "AAO",
+        "arrival_airport": "AAO",
+        "flight_hours": 1.1
+    },
+    {
+        "date": "1998-06-22",
+        "aircraft_registration": "N5990E",
+        "departure_airport": "3KM",
+        "arrival_airport": "3KM",
+        "flight_hours": 1.0
+    }
+]

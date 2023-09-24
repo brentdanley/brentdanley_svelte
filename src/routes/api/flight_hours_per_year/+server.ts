@@ -1,5 +1,5 @@
-import sqlite3 from 'sqlite3';
-import { open } from 'sqlite';
+import fs from 'fs';
+import path from 'path';
 
 interface LogbookResponse {
 	status: number;
@@ -13,24 +13,41 @@ interface LogbookResponse {
 }
 
 export async function GET(): Promise<LogbookResponse> {
-	// Open the SQLite database; adjust the path as necessary
-	const db = await open({
-		filename: 'static/pilot_logbook.db',
-		driver: sqlite3.Database
+	// Read JSON file
+	const filePath = path.resolve('static/data/pilot_logbook.json');
+	const rawData = fs.readFileSync(filePath, 'utf8');
+	const data = JSON.parse(rawData);
+
+	const groupedDataObject = data.reduce((acc: any, cur: any) => {
+		const year = cur.date.split('-')[0];
+		const flightHours = parseFloat(cur.flight_hours); // Make sure it's a number
+
+		if (acc[year]) {
+			acc[year].total_hours += flightHours;
+		} else {
+			acc[year] = {
+				year,
+				total_hours: flightHours
+			};
+		}
+		return acc;
+	}, {});
+
+	// Round total_hours to 1 decimal place for each year
+	Object.keys(groupedDataObject).forEach((year) => {
+		groupedDataObject[year].total_hours = parseFloat(
+			groupedDataObject[year].total_hours.toFixed(1)
+		);
 	});
 
-	// Query to get flight hours per year
-	const rows = await db.all(
-		`SELECT strftime('%Y', date) as year, ROUND(SUM(flight_hours), 1) as total_hours FROM logbook GROUP BY year ORDER BY year`
-	);
-
-	// Close the database
-	await db.close();
+	// Sort years and create a sorted array
+	const years = Object.keys(groupedDataObject).sort();
+	const groupedDataArray = years.map((year) => groupedDataObject[year]);
 
 	return new Response(
 		JSON.stringify({
 			status: 200,
-			body: rows,
+			body: groupedDataArray,
 			headers: {
 				'content-type': 'application/json'
 			}

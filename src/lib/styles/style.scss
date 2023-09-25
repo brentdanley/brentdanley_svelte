@@ -1,7 +1,8 @@
 /* style.scss */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,900;1,400;1,900&family=Passion+One:wght@400;900&display=swap');
+@import '@fortawesome/fontawesome-free/css/all.min.css';
 
-:root {
+:root  {
 	--primary-dark-color: hsl(203, 41%, 51%);
 	--secondary-dark-color: hsl(2, 59%, 54%);
 	--primary-light-color: hsl(105, 55%, 96%);

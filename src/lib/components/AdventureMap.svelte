@@ -7,6 +7,7 @@
 		endLabel?: string;
 		startIcon?: Activities;
 		endIcon?: Activities;
+		label?: string;
 	};
 
 	export type Point = {
@@ -26,9 +27,59 @@
 	export let tracks: Track[] = [];
 	export let points: Point[] = [];
 
+	let selectedTrackIndex: number | null = null;
+
 	let mapContainer: HTMLElement;
 	let map: mapboxgl.Map;
 	let bounds = new mapboxgl.LngLatBounds();
+
+	const getTrackBounds = (feature: GeoJSON.Feature<GeoJSON.LineString>): mapboxgl.LngLatBounds => {
+		const bounds = new mapboxgl.LngLatBounds();
+		feature.geometry.coordinates.forEach((coord) => {
+			bounds.extend(coord as mapboxgl.LngLatLike);
+		});
+		return bounds;
+	};
+
+	let previouslySelectedIndex: number | null = null;
+
+	const selectTrack = (index: number) => {
+		selectedTrackIndex = index;
+		updateMapColors();
+
+		// Get the GeoJSON feature for the selected track from the map's data source
+		const feature: GeoJSON.Feature<GeoJSON.LineString> = map.getSource(`route-${index}`)._data
+			.features[0];
+
+		// If there was a previously selected track, move its layer down
+		if (previouslySelectedIndex !== null) {
+			map.moveLayer(`route-${previouslySelectedIndex}`, `route-${index}`);
+		}
+
+		// Move the newly selected layer to the top.
+		// If you have a topmost layer that you don't want to cover, specify it as the second argument.
+		// Otherwise, the layer will be moved to the top of the stack.
+		map.moveLayer(`route-${index}`);
+
+		// Update the index of the currently selected track
+		previouslySelectedIndex = index;
+
+		// Get the bounds of the selected track
+		const bounds = getTrackBounds(feature);
+
+		// Fit the map to the bounds of the selected track with some padding
+		map.fitBounds(bounds, { padding: 50 });
+	};
+
+	const updateMapColors = () => {
+		tracks.forEach((track, index) => {
+			const layerID = `route-${index}`;
+			const newColor = index === selectedTrackIndex ? track.color ?? 'magenta' : 'gray';
+			if (map.getLayer(layerID)) {
+				map.setPaintProperty(layerID, 'line-color', newColor);
+			}
+		});
+	};
 
 	const addMarkerToMap = ({ lat, lng, label, type }: Point) => {
 		// Create a DOM element for the marker and put in it the icon
@@ -155,6 +206,9 @@
 
 			// Set map to fit the bounds of all tracks
 			map.fitBounds(bounds, { padding: 80 });
+
+			// Call updateMapColors to set the initial track colors
+			updateMapColors();
 		});
 
 		// Add custom controls to map
@@ -167,6 +221,16 @@
 </script>
 
 <div id="map" bind:this={mapContainer} />
+<ul class="track-list">
+	{#each tracks as track, i}
+		<li
+			class="track-item {selectedTrackIndex === i ? 'selected' : ''}"
+			on:click={() => selectTrack(i)}
+		>
+			{track.startLabel || track.filename}
+		</li>
+	{/each}
+</ul>
 
 <style lang="scss">
 	@import 'mapbox-gl/dist/mapbox-gl.css';
@@ -176,5 +240,34 @@
 		width: 100%;
 		aspect-ratio: 4 / 3;
 		margin: 2rem auto;
+	}
+	// Style for the list container
+	.track-list {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	// Style for each list item (i.e., button)
+	.track-item {
+		cursor: pointer;
+		padding: 6px 15px;
+		margin: 5px;
+		color: var(--secondary-light-color);
+		background-color: var(--dark-font-color);
+		border: 2px solid var(--secondary-light-color);
+		border-radius: 5px;
+		transition: background-color 0.3s ease;
+
+		&:hover {
+			background-color: #ddd;
+		}
+
+		// Additional style for the selected track
+		&.selected {
+			background-color: #bbb;
+		}
 	}
 </style>

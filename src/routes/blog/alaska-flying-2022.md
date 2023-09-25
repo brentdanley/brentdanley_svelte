@@ -11,17 +11,17 @@ tags: [flying, flight, aviation, adventure, alaska]
     const tracks = [
         { 
             filename: 'tracklog_20220821_paaq-paaq.kml', 
-            startLabel: 'PAAQ',
+            startLabel: 'Rental checkout',
             startIcon: 'flight'
         },
         { 
             filename: 'tracklog_20220821_paaq-paaq_2.kml', 
-            startLabel: 'PAAQ',
+            startLabel: 'Knik Glacier',
             startIcon: 'flight'
         },
         { 
             filename: 'tracklog_20220823_paaq-paaq.kml', 
-            startLabel: 'PAAQ',
+            startLabel: 'Matanuska Glacier',
             startIcon: 'flight'
         },
         { 

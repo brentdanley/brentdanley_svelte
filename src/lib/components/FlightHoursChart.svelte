@@ -38,18 +38,39 @@
 				]
 			},
 			options: {
+				plugins: {
+					legend: {
+						display: false
+					}
+				},
 				scales: {
 					x: {
+						title: {
+							display: true,
+							text: 'Year',
+							color: 'rgba(75, 192, 192, 1)',
+							font: {
+								size: 24
+							}
+						},
 						ticks: {
-							color: 'white' // X-axis label color
+							color: 'white'
 						}
 					},
 					y: {
+						title: {
+							display: true,
+							text: 'Total Flight Hours',
+							color: 'rgba(75, 192, 192, 1)',
+							font: {
+								size: 24
+							}
+						},
 						ticks: {
-							color: 'white' // Y-axis label color
+							color: 'white'
 						},
 						grid: {
-							color: 'rgba(255, 255, 255, 0.1)' // grid color
+							color: 'rgba(255, 255, 255, 0.1)'
 						},
 						beginAtZero: true
 					}

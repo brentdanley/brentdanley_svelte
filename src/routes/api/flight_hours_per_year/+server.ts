@@ -1,4 +1,4 @@
-import data from './data/pilot_logbook.json';
+import data from '/data/pilot_logbook.json';
 
 interface LogbookResponse {
 	status: number;

@@ -1,7 +1,7 @@
 ---
-title: Flying in Alaska 2023
+title: Alaska 2023
 date: 2023-09-25
-tags: [flying, flight, aviation, adventure, alaska]
+tags: [flying, flight, aviation, adventure, alaska, travel]
 ---
 
 <script>
@@ -43,6 +43,16 @@ tags: [flying, flight, aviation, adventure, alaska]
             filename: 'alaska_20230811_chalatna-ak8.kml',
             startLabel: 'Chalatna Lake to AK8',
             startIcon: 'flight'
+        },
+        { 
+            filename: 'alaska_20230809_fishing.gpx',
+            startLabel: 'Fishing in Beverly Lake',
+            startIcon: 'boat'
+        },
+        { 
+            filename: 'alaska_20230811_fishing.gpx',
+            startLabel: 'Fishing in Beverly Lake',
+            startIcon: 'boat'
         },
     ]
 

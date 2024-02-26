@@ -37,7 +37,7 @@
 	export let tracks: Track[] = [];
 	export let points: Point[] = [];
 	export let sectionals: String[] = [];
-	export let plates: String[] = [];
+	export let plates: String[];
 
 	const mapSectionals = writable({
 		newyork_sectional: false,
@@ -45,7 +45,7 @@
 	} as MapSectionals);
 
 	const mapPlates = writable({
-		klew_rnav22: false
+		klew_rnav22: plates.includes('klew_rnav22') ? true : false
 	} as MapPlates);
 
 	let selectedTrackIndex: number | null = null;
@@ -168,6 +168,7 @@
 			Object.keys($mapSectionals).forEach((layer) => {
 				map.setLayoutProperty(layer, 'visibility', $mapSectionals[layer] ? 'visible' : 'none');
 			});
+
 			Object.keys($mapPlates).forEach((layer) => {
 				map.setLayoutProperty(layer, 'visibility', $mapPlates[layer] ? 'visible' : 'none');
 			});

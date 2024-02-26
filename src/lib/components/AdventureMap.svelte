@@ -17,9 +17,13 @@
 		type?: Activities;
 	};
 
-	export type MapLayers = {
+	export type MapSectionals = {
 		newyork_sectional?: boolean;
 		montreal_sectional: boolean;
+	};
+
+	export type MapPlates = {
+		klew_rnav22: boolean;
 	};
 </script>
 
@@ -29,16 +33,20 @@
 	import axios from 'axios';
 	import * as ts from '@tmcw/togeojson';
 	import { writable } from 'svelte/store';
-	import Layout from '../../routes/+layout.svelte';
 
 	export let tracks: Track[] = [];
 	export let points: Point[] = [];
 	export let sectionals: String[] = [];
+	export let plates: String[] = [];
 
-	const mapLayers = writable({
+	const mapSectionals = writable({
 		newyork_sectional: false,
 		montreal_sectional: false
-	} as MapLayers);
+	} as MapSectionals);
+
+	const mapPlates = writable({
+		klew_rnav22: false
+	} as MapPlates);
 
 	let selectedTrackIndex: number | null = null;
 
@@ -46,13 +54,21 @@
 	let map: mapboxgl.Map;
 	let bounds = new mapboxgl.LngLatBounds();
 
-	const toggleSectional = (sectional: keyof MapLayers) => {
-		mapLayers.update((layers) => {
+	const togglePlate = (plate: keyof MapPlates) => {
+		mapPlates.update((layers) => {
+			layers[plate] = !layers[plate];
+			return layers;
+		});
+
+		map.setLayoutProperty(plate, 'visibility', $mapPlates[plate] ? 'visible' : 'none');
+	};
+	const toggleSectional = (sectional: keyof MapSectionals) => {
+		mapSectionals.update((layers) => {
 			layers[sectional] = !layers[sectional];
 			return layers;
 		});
 
-		map.setLayoutProperty(sectional, 'visibility', $mapLayers[sectional] ? 'visible' : 'none');
+		map.setLayoutProperty(sectional, 'visibility', $mapSectionals[sectional] ? 'visible' : 'none');
 	};
 
 	const getTrackBounds = (feature: GeoJSON.Feature<GeoJSON.LineString>): mapboxgl.LngLatBounds => {
@@ -149,10 +165,11 @@
 		});
 
 		map.on('load', async () => {
-			// Make sectional layers hidden
-			console.log('map layers', $mapLayers);
-			Object.keys($mapLayers).forEach((layer) => {
-				map.setLayoutProperty(layer, 'visibility', $mapLayers[layer] ? 'visible' : 'none');
+			Object.keys($mapSectionals).forEach((layer) => {
+				map.setLayoutProperty(layer, 'visibility', $mapSectionals[layer] ? 'visible' : 'none');
+			});
+			Object.keys($mapPlates).forEach((layer) => {
+				map.setLayoutProperty(layer, 'visibility', $mapPlates[layer] ? 'visible' : 'none');
 			});
 
 			for (let i = 0; i < tracks.length; i++) {
@@ -291,7 +308,7 @@
 	{#if sectionals && sectionals.includes('ny')}
 		<div
 			on:click={() => toggleSectional('newyork_sectional')}
-			class="item{$mapLayers['newyork_sectional'] ? ' selected' : ''}"
+			class="item{$mapSectionals['newyork_sectional'] ? ' selected' : ''}"
 		>
 			New York Sectional
 		</div>
@@ -301,6 +318,7 @@
 			Montreal Sectional
 		</div>
 	{/if}
+	<div on:click={() => togglePlate('klew_rnav22')} class="item">KLEW RNAV 22</div>
 </ul>
 
 <style lang="scss">

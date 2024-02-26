@@ -16,6 +16,11 @@
 		label: string;
 		type?: Activities;
 	};
+
+	export type MapLayers = {
+		newyork_sectional?: boolean;
+		montreal_sectional: boolean;
+	};
 </script>
 
 <script lang="ts">
@@ -23,15 +28,32 @@
 	import mapboxgl from 'mapbox-gl';
 	import axios from 'axios';
 	import * as ts from '@tmcw/togeojson';
+	import { writable } from 'svelte/store';
+	import Layout from '../../routes/+layout.svelte';
 
 	export let tracks: Track[] = [];
 	export let points: Point[] = [];
+	export let sectionals: String[] = [];
+
+	const mapLayers = writable({
+		newyork_sectional: false,
+		montreal_sectional: false
+	} as MapLayers);
 
 	let selectedTrackIndex: number | null = null;
 
 	let mapContainer: HTMLElement;
 	let map: mapboxgl.Map;
 	let bounds = new mapboxgl.LngLatBounds();
+
+	const toggleSectional = (sectional: keyof MapLayers) => {
+		mapLayers.update((layers) => {
+			layers[sectional] = !layers[sectional];
+			return layers;
+		});
+
+		map.setLayoutProperty(sectional, 'visibility', $mapLayers[sectional] ? 'visible' : 'none');
+	};
 
 	const getTrackBounds = (feature: GeoJSON.Feature<GeoJSON.LineString>): mapboxgl.LngLatBounds => {
 		const bounds = new mapboxgl.LngLatBounds();
@@ -118,15 +140,21 @@
 		bounds.extend([lng, lat]);
 	};
 	onMount(async () => {
-		mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
+		mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ADVENTURE_TOKEN;
 		map = new mapboxgl.Map({
 			container: mapContainer,
-			style: 'mapbox://styles/mapbox/satellite-streets-v12', // style URL
+			style: 'mapbox://styles/brentedanley/clt0gru7400rl01qshwet746b',
 			center: [-77.04, 38.907], // starting position [lng, lat]
 			zoom: 3
 		});
 
 		map.on('load', async () => {
+			// Make sectional layers hidden
+			console.log('map layers', $mapLayers);
+			Object.keys($mapLayers).forEach((layer) => {
+				map.setLayoutProperty(layer, 'visibility', $mapLayers[layer] ? 'visible' : 'none');
+			});
+
 			for (let i = 0; i < tracks.length; i++) {
 				const track = tracks[i];
 				const response = await axios.get(`/tracklogs/${track.filename}`);
@@ -143,8 +171,14 @@
 					console.error(`Unsupported file extension: ${fileExtension}`);
 					continue;
 				}
-				const trackCoordinates = converted?.features?.[0].geometry?.coordinates;
-				if (track.startLabel) {
+
+				// Add type check before accessing coordinates
+				let trackCoordinates;
+				if (converted?.features?.[0].geometry?.type === 'LineString') {
+					trackCoordinates = converted?.features?.[0].geometry?.coordinates;
+				}
+
+				if (trackCoordinates && track.startLabel) {
 					const startPoint: Point = {
 						lat: trackCoordinates[0][1],
 						lng: trackCoordinates[0][0],
@@ -153,7 +187,7 @@
 					};
 					addMarkerToMap(startPoint);
 				}
-				if (track.endLabel) {
+				if (trackCoordinates && track.endLabel) {
 					const startPoint: Point = {
 						lat: trackCoordinates[trackCoordinates.length - 1][1],
 						lng: trackCoordinates[trackCoordinates.length - 1][0],
@@ -198,7 +232,26 @@
 						});
 					}
 				});
+
+				if (tracks.length === 1) {
+					selectTrack(i);
+				}
 			}
+
+			// console.log all the layers
+			map.on('styledata', () => {
+				console.log('Map style loaded');
+				console.log(map.getStyle());
+			});
+
+			// Add map zoomend event listener
+			map.on('zoomend', () => {
+				// Get current zoom level
+				const zoom = map.getZoom();
+
+				// Log zoom level
+				console.log('Current zoom:', zoom);
+			});
 
 			points.forEach((point) => {
 				addMarkerToMap(point);
@@ -221,15 +274,33 @@
 </script>
 
 <div id="map" bind:this={mapContainer} />
-<ul class="track-list">
-	{#each tracks as track, i}
-		<li
-			class="track-item {selectedTrackIndex === i ? 'selected' : ''}"
-			on:click={() => selectTrack(i)}
+<ul class="map-button-list">
+	{#if tracks.length > 1}
+		{#each tracks as track, i}
+			<li
+				class="item {selectedTrackIndex === i ? 'selected' : ''}"
+				on:click={() => selectTrack(i)}
+				on:keydown={() => selectTrack(i)}
+			>
+				{track.startLabel || track.filename}
+			</li>
+		{/each}
+	{/if}
+</ul>
+<ul class="map-button-list">
+	{#if sectionals && sectionals.includes('ny')}
+		<div
+			on:click={() => toggleSectional('newyork_sectional')}
+			class="item{$mapLayers['newyork_sectional'] ? ' selected' : ''}"
 		>
-			{track.startLabel || track.filename}
-		</li>
-	{/each}
+			New York Sectional
+		</div>
+	{/if}
+	{#if sectionals && sectionals.includes('mon')}
+		<div on:click={() => toggleSectional('montreal_sectional')} class="item">
+			Montreal Sectional
+		</div>
+	{/if}
 </ul>
 
 <style lang="scss">
@@ -242,32 +313,31 @@
 		margin: 2rem auto;
 	}
 	// Style for the list container
-	.track-list {
+	.map-button-list {
 		list-style-type: none;
 		padding: 0;
 		margin: 0;
 		display: flex;
 		flex-wrap: wrap;
-	}
+		// Style for each list item (i.e., button)
+		.item {
+			cursor: pointer;
+			padding: 6px 15px;
+			margin: 5px;
+			color: var(--secondary-light-color);
+			background-color: var(--dark-font-color);
+			border: 2px solid var(--secondary-light-color);
+			border-radius: 5px;
+			transition: background-color 0.3s ease;
 
-	// Style for each list item (i.e., button)
-	.track-item {
-		cursor: pointer;
-		padding: 6px 15px;
-		margin: 5px;
-		color: var(--secondary-light-color);
-		background-color: var(--dark-font-color);
-		border: 2px solid var(--secondary-light-color);
-		border-radius: 5px;
-		transition: background-color 0.3s ease;
+			&:hover {
+				background-color: #ddd;
+			}
 
-		&:hover {
-			background-color: #ddd;
-		}
-
-		// Additional style for the selected track
-		&.selected {
-			background-color: #bbb;
+			// Additional style for the selected track
+			&.selected {
+				background-color: #bbb;
+			}
 		}
 	}
 </style>

@@ -137,9 +137,11 @@ tags: [flying, flight, aviation, adventure, alaska]
             type: "photo",
         }
     ]
+
+    const sectionals = ['anc']
 </script>
 
-<AdventureMap tracks={tracks} points={points} />
+<AdventureMap tracks={tracks} points={points} sectionals={sectionals} />
 
 ### CTAF Areas
 

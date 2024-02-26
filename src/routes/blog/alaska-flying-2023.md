@@ -104,9 +104,11 @@ tags: [flying, flight, aviation, adventure, alaska, travel]
             type: "photo",
         }
     ]
+
+    const sectionals = ['anc']
 </script>
 
-<AdventureMap tracks={tracks} points={points} />
+<AdventureMap tracks={tracks} points={points} sectionals={sectionals} />
 
 [Alaska Floats & Skis](https://alaskafloats.com/) - The best floatplane experience in Alaska!
 

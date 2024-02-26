@@ -20,6 +20,7 @@
 	export type MapSectionals = {
 		newyork_sectional?: boolean;
 		montreal_sectional: boolean;
+		anchorage_sectional: boolean;
 	};
 
 	export type MapPlates = {
@@ -41,11 +42,12 @@
 
 	const mapSectionals = writable({
 		newyork_sectional: false,
-		montreal_sectional: false
+		montreal_sectional: false,
+		anchorage_sectional: false
 	} as MapSectionals);
 
 	const mapPlates = writable({
-		klew_rnav22: plates.includes('klew_rnav22') ? true : false
+		klew_rnav22: plates?.includes('klew_rnav22') ? true : false
 	} as MapPlates);
 
 	let selectedTrackIndex: number | null = null;
@@ -256,21 +258,6 @@
 				}
 			}
 
-			// console.log all the layers
-			map.on('styledata', () => {
-				console.log('Map style loaded');
-				console.log(map.getStyle());
-			});
-
-			// Add map zoomend event listener
-			map.on('zoomend', () => {
-				// Get current zoom level
-				const zoom = map.getZoom();
-
-				// Log zoom level
-				console.log('Current zoom:', zoom);
-			});
-
 			points.forEach((point) => {
 				addMarkerToMap(point);
 			});
@@ -306,7 +293,7 @@
 	{/if}
 </ul>
 <ul class="map-button-list">
-	{#if sectionals && sectionals.includes('ny')}
+	{#if sectionals?.includes('ny')}
 		<div
 			on:click={() => toggleSectional('newyork_sectional')}
 			class="item{$mapSectionals['newyork_sectional'] ? ' selected' : ''}"
@@ -314,12 +301,19 @@
 			New York Sectional
 		</div>
 	{/if}
-	{#if sectionals && sectionals.includes('mon')}
+	{#if sectionals?.includes('anc')}
+		<div on:click={() => toggleSectional('anchorage_sectional')} class="item">
+			Anchorage Sectional
+		</div>
+	{/if}
+	{#if sectionals?.includes('mon')}
 		<div on:click={() => toggleSectional('montreal_sectional')} class="item">
 			Montreal Sectional
 		</div>
 	{/if}
-	<div on:click={() => togglePlate('klew_rnav22')} class="item">KLEW RNAV 22</div>
+	{#if plates?.includes('klew_rnav22')}
+		<div on:click={() => togglePlate('klew_rnav22')} class="item">KLEW RNAV 22</div>
+	{/if}
 </ul>
 
 <style lang="scss">

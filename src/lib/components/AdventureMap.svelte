@@ -314,6 +314,9 @@
 	{#if plates?.includes('klew_rnav22')}
 		<div on:click={() => togglePlate('klew_rnav22')} class="item">KLEW RNAV 22</div>
 	{/if}
+	{#if plates?.includes('kpwm_rnav11')}
+		<div on:click={() => togglePlate('kpwm_rnav11')} class="item">KPWM RNAV 11</div>
+	{/if}
 </ul>
 
 <style lang="scss">

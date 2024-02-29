@@ -10,7 +10,7 @@ tags: [flying, 'instrument lesson', ifr]
     const tracks = [
         { 
             filename: 'ifr_20240228_kpwm-kpwm.kml', 
-            startLabel: 'KPWM',
+            startLabel: 'Start',
             startIcon: 'flight'
         }
     ]

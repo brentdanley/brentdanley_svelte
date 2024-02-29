@@ -1,6 +1,6 @@
 ---
 title: Kayaking in Casco Bay
-date: 2023-06-24
+date: '2023-06-24'
 tags: [kayaking, maine, paddling, adventure, 'casco bay']
 ---
 

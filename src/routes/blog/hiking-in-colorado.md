@@ -1,6 +1,6 @@
 ---
 title: Hiking in Colorado
-date: 2023-06-11
+date: '2023-06-11'
 tags: ['hiking', 'colorado']
 ---
 

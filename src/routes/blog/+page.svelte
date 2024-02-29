@@ -3,7 +3,7 @@
 	import Fa from 'svelte-fa/src/fa.svelte';
 	import { faCalendar } from '@fortawesome/free-regular-svg-icons';
 	import TagBar from '$lib/components/TagBar.svelte';
-	import { format } from 'date-fns';
+	import { parseISO, format } from 'date-fns';
 
 	type PostType = {
 		path: string;
@@ -34,7 +34,7 @@
 			</h2>
 			<div class="published-date">
 				<Fa icon={faCalendar} />
-				{format(new Date(post.meta.date), 'EEEE, LLLL d, yyyy')}
+				{format(parseISO(post.meta.date), 'EEEE, LLLL d, yyyy')}
 			</div>
 			<TagBar tags={post.meta.tags} />
 		</li>

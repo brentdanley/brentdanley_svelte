@@ -1,6 +1,6 @@
 ---
 title: 'Jim Talks Dwight In To Getting ForeFlight'
-date: 2022-12-05
+date: '2022-12-05'
 tags: [comedy, foreflight, ai, bot, humor]
 ---
 

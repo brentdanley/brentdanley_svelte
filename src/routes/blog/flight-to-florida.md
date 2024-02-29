@@ -1,6 +1,6 @@
 ---
 title: Flight to Florida in a Cessna Cardinal
-date: 2023-06-10
+date: '2023-06-10'
 tags: [flying, flight, aviation, adventure, cross-country]
 ---
 

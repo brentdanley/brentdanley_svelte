@@ -1,6 +1,6 @@
 ---
 title: Alaska 2023
-date: 2023-09-25
+date: '2023-09-25'
 tags: [flying, flight, aviation, adventure, alaska, travel]
 ---
 

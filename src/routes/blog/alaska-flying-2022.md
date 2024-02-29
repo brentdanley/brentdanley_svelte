@@ -1,6 +1,6 @@
 ---
 title: Flying in Alaska 2022
-date: 2023-06-14
+date: '2023-06-14'
 tags: [flying, flight, aviation, adventure, alaska]
 ---
 

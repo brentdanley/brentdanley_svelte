@@ -1,6 +1,6 @@
 ---
 title: Instrument Flying Lesson
-date: 2024-02-28
+date: '2024-02-28'
 tags: [flying, 'instrument lesson', ifr]
 ---
 

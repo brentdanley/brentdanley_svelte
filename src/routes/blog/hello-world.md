@@ -1,6 +1,6 @@
 ---
 title: Hello World, Again
-date: 2022-11-20
+date: '2022-11-20'
 tags: [svelte, sveltekit, markdown, coding, blog]
 ---
 

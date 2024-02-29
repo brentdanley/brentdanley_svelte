@@ -1,6 +1,6 @@
 ---
 title: 'Obsidian: My Second Brain'
-date: 2022-11-21
+date: '2022-11-21'
 tags: [obsidian, productivity, 'how to', markdown]
 ---
 

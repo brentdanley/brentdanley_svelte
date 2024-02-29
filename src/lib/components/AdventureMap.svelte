@@ -47,7 +47,8 @@
 	} as MapSectionals);
 
 	const mapPlates = writable({
-		klew_rnav22: plates?.includes('klew_rnav22') ? true : false
+		klew_rnav22: plates?.includes('klew_rnav22') ? true : false,
+		kpwm_rnav11: plates?.includes('kpwm_rnav11') ? true : false
 	} as MapPlates);
 
 	let selectedTrackIndex: number | null = null;

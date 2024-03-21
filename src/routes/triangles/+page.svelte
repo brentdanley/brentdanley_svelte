@@ -6,60 +6,130 @@
 	 * It also draws a triangle on a canvas.
 	 *
 	 * When the user changes a side or angle, determine if there's enough information to draw a triangle. In addition to calculating sides and angles, calculate the canvas points for each corner of the triangle.
+	 * 1. Calculate the sides
+	 * 2. Get scale factor
+	 * 3. Set new triangle side values
+	 * 4. Calculate height and width of triangle
+	 * 5. Calculate triangle origin
+	 * 6. Calculate triangle coordinates
 	 */
 	import { onMount } from 'svelte';
 
 	const degToRad = (deg: number): number => deg * (Math.PI / 180);
 
-	// Triangle definitions
-	let A: number = 65;
-	let B: number = 80;
+	// TEMP
+	let A: number = 45;
+	let B: number = 100;
 	let C: number = 180 - A - B;
-	let a: number = 9000;
-	let b: number = (a / Math.sin(degToRad(A))) * Math.sin(degToRad(B));
-	let c: number = (a / Math.sin(degToRad(A))) * Math.sin(degToRad(C));
+	let a: number = 132;
 
-	const canvasDimensions = { width: 600, height: 600 };
-	const longest = Math.max(a, b, c);
-	const triangleScale: number = (canvasDimensions.width * 0.8) / longest;
+	type Triangle = {
+		sides: {
+			a: number;
+			b: number;
+			c: number;
+		};
+		angles: {
+			A: number;
+			B: number;
+			C: number;
+		};
+	};
 
-	// Triangle origin is angle A in the bottom left corner, with triangle centered in the middle of the canvas.
-	const triangleHeight: number = Math.sin(degToRad(C)) * c * triangleScale;
-	const triangleWidth: number = Math.cos(degToRad(C)) * a * triangleScale;
-	// The origin of the triangle is the B angle, and the x is left if angle B is acute. Otherwise, the x has to be offset so C is at the right
-	const triangleOrigin: [number, number] = [
-		(canvasDimensions.width - triangleWidth) / 2,
-		triangleHeight + (canvasDimensions.height - triangleHeight) / 2
-	];
+	const triangle: Triangle = {
+		angles: {
+			A: degToRad(A),
+			B: degToRad(B),
+			C: degToRad(180 - A - B)
+		},
+		sides: {
+			a: a,
+			b: (a / Math.sin(degToRad(A))) * Math.sin(degToRad(B)),
+			c: (a / Math.sin(degToRad(A))) * Math.sin(degToRad(C))
+		}
+	};
 
-	console.log('triangleOrigin', triangleOrigin);
-	console.log('triangleHeight', triangleHeight);
-	console.log('triangleWidth', triangleWidth);
+	const canvasDimensions = { width: 800, height: 800 };
+
+	const getTriangleDimensions = (triangle: Triangle) => {
+		const widths: { a: number; b: number; c: number } = {
+			a: triangle.sides.a,
+			b: Math.abs(Math.cos(triangle.angles.C)) * triangle.sides.b,
+			c: Math.abs(Math.cos(triangle.angles.B)) * triangle.sides.c
+		};
+		return {
+			height: Math.sin(triangle.angles.B) * triangle.sides.c,
+			width: Math.max(...Object.values(widths))
+		};
+	};
+
+	const triangleDimensions = getTriangleDimensions(triangle);
+	const triangleScale = Math.min(
+		(canvasDimensions.height * 0.8) / triangleDimensions.height,
+		(canvasDimensions.width * 0.8) / triangleDimensions.width
+	);
+
+	const scaledTriangle = {
+		sides: {
+			a: triangle.sides.a * triangleScale,
+			b: triangle.sides.b * triangleScale,
+			c: triangle.sides.c * triangleScale
+		},
+		angles: {
+			A: triangle.angles.A,
+			B: triangle.angles.B,
+			C: triangle.angles.C
+		}
+	};
+	console.log('scaledTriangle', scaledTriangle);
+
+	const verticalPadding = (canvasDimensions.height - triangleDimensions.height * triangleScale) / 2;
+	const horizontalPadding = (canvasDimensions.width - triangleDimensions.width * triangleScale) / 2;
+
+	const padding = { vertical: verticalPadding, horizontal: horizontalPadding };
+
+	console.log('triangle', triangle);
+	// Triangle origin is the B angle at lower left
+	let triangleOrigin = [padding.horizontal, padding.vertical];
 
 	// Draw the triangle, beginning with B, then C, finally A with B at the bottom left, C at the bottom right, and A at the top.
-	let triangleCoords: { A: [number, number]; B: [number, number]; C: [number, number] } = {
-		A: [
-			triangleOrigin[0] + Math.cos(degToRad(B)) * c * triangleScale,
-			triangleOrigin[1] - Math.sin(degToRad(B)) * c * triangleScale
-		],
-		B: [triangleOrigin[0], triangleOrigin[1]],
-		C: [triangleOrigin[0] + a * triangleScale, triangleOrigin[1]]
+	const getTriangleCoords = (triangle: Triangle) => {
+		return {
+			A: [
+				triangleOrigin[0] + Math.abs(Math.cos(scaledTriangle.angles.B)) * scaledTriangle.sides.c,
+				triangleOrigin[1]
+			],
+			B: [
+				triangle.angles.B <= Math.PI / 2
+					? triangleOrigin[0]
+					: triangleOrigin[0] + triangleDimensions.width * triangleScale - scaledTriangle.sides.a,
+				triangleOrigin[1] + triangleDimensions.height * triangleScale
+			],
+			C: [
+				triangleOrigin[0] + scaledTriangle.sides.a,
+				triangleOrigin[1] + triangleDimensions.height * triangleScale
+			]
+		};
 	};
-	let sideLabelCoords: { A: [number, number]; B: [number, number]; C: [number, number] } = {
+
+	let triangleCoords = getTriangleCoords(triangle);
+	console.log('triangleCoords', triangleCoords);
+	let sideLabelCoords: { a: [number, number]; b: [number, number]; c: [number, number] } = {
 		a: [triangleOrigin[0] + (a * triangleScale) / 2, triangleOrigin[1]],
 		b: [
-			triangleCoords.C[0] - Math.cos(degToRad(C)) * ((b * triangleScale) / 2),
-			triangleCoords.C[1] - Math.sin(degToRad(C)) * ((b * triangleScale) / 2)
+			triangleCoords.C[0] - Math.cos(triangle.angles.C) * ((triangle.sides.b * triangleScale) / 2),
+			triangleCoords.C[1] - Math.sin(triangle.angles.C) * ((triangle.sides.b * triangleScale) / 2)
 		],
 		c: [
-			triangleCoords.B[0] + Math.cos(degToRad(B)) * ((c * triangleScale) / 2),
-			triangleCoords.B[1] - Math.sin(degToRad(B)) * ((c * triangleScale) / 2)
+			triangleCoords.B[0] + Math.cos(triangle.angles.B) * ((triangle.sides.c * triangleScale) / 2),
+			triangleCoords.B[1] - Math.sin(triangle.angles.B) * ((triangle.sides.c * triangleScale) / 2)
 		]
 	};
 
 	let clicked: number = 0;
 
-	let canvas;
+	let canvas: HTMLCanvasElement;
+
 	let ctx;
 
 	onMount(() => {
@@ -68,9 +138,8 @@
 	});
 
 	$: {
-		if (a && b && c) {
+		if (a) {
 			// calculate angles from sides
-			clicked = a + b + c;
 		} else if (A && B && C) {
 			// calculate sides from angles
 			clicked = A + B + C;
@@ -105,7 +174,6 @@
 	const drawTriangle = () => {
 		ctx.strokeStyle = 'magenta';
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
-		// Draw side a
 		ctx.beginPath();
 		ctx.moveTo(triangleCoords.A[0], triangleCoords.A[1]);
 		ctx.lineTo(triangleCoords.B[0], triangleCoords.B[1]);
@@ -115,14 +183,26 @@
 
 		ctx.font = '18px Arial black';
 		// Draw angle labels
-		ctx.fillText(`A: ${A.toFixed(0)}º`, triangleCoords.A[0], triangleCoords.A[1]);
-		ctx.fillText(`B: ${B.toFixed(0)}º`, triangleCoords.B[0], triangleCoords.B[1]);
-		ctx.fillText(`C: ${C.toFixed(0)}º`, triangleCoords.C[0], triangleCoords.C[1]);
+		ctx.fillText(
+			`A: ${A.toFixed(0)}º`,
+			getTriangleCoords(triangle).A[0],
+			getTriangleCoords(triangle).A[1]
+		);
+		ctx.fillText(
+			`B: ${B.toFixed(0)}º`,
+			getTriangleCoords(triangle).B[0],
+			getTriangleCoords(triangle).B[1]
+		);
+		ctx.fillText(
+			`C: ${C.toFixed(0)}º`,
+			getTriangleCoords(triangle).C[0],
+			getTriangleCoords(triangle).C[1]
+		);
 
 		// Draw side labels
-		ctx.fillText(`a: ${a.toFixed(2)}`, sideLabelCoords.a[0], sideLabelCoords.a[1]);
-		ctx.fillText(`b: ${b.toFixed(2)}`, sideLabelCoords.b[0], sideLabelCoords.b[1]);
-		ctx.fillText(`c: ${c.toFixed(2)}`, sideLabelCoords.c[0], sideLabelCoords.c[1]);
+		ctx.fillText(`a: ${triangle.sides.a.toFixed(2)}`, sideLabelCoords.a[0], sideLabelCoords.a[1]);
+		ctx.fillText(`b: ${triangle.sides.b.toFixed(2)}`, sideLabelCoords.b[0], sideLabelCoords.b[1]);
+		ctx.fillText(`c: ${triangle.sides.c.toFixed(2)}`, sideLabelCoords.c[0], sideLabelCoords.c[1]);
 
 		ctx.textAlign = 'center'; // alignment
 		ctx.textBaseline = 'middle';
@@ -138,7 +218,7 @@
 		<input type="number" bind:value={a} on:change={handleSideChange} />
 	</label>
 
-	<label>
+	<!-- <label>
 		Side b:
 		<input type="number" bind:value={b} on:change={handleSideChange} />
 	</label>
@@ -146,7 +226,7 @@
 	<label>
 		Side c:
 		<input type="number" bind:value={c} on:change={handleSideChange} />
-	</label>
+	</label> -->
 
 	<label>
 		Angle A:

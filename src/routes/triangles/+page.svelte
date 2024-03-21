@@ -18,10 +18,14 @@
 	const degToRad = (deg: number): number => deg * (Math.PI / 180);
 
 	// TEMP
-	let A: number = 45;
-	let B: number = 100;
+	let A: number = 5;
+	let B: number = 40;
 	let C: number = 180 - A - B;
 	let a: number = 132;
+	if (C < 0) {
+		console.error('Invalid triangle');
+		throw new Error('Invalid triangle');
+	}
 
 	type Triangle = {
 		sides: {
@@ -48,26 +52,27 @@
 			c: (a / Math.sin(degToRad(A))) * Math.sin(degToRad(C))
 		}
 	};
+	console.log('triangle', triangle);
 
 	const canvasDimensions = { width: 800, height: 800 };
 
-	const getTriangleDimensions = (triangle: Triangle) => {
-		const widths: { a: number; b: number; c: number } = {
-			a: triangle.sides.a,
-			b: Math.abs(Math.cos(triangle.angles.C)) * triangle.sides.b,
-			c: Math.abs(Math.cos(triangle.angles.B)) * triangle.sides.c
-		};
-		return {
-			height: Math.sin(triangle.angles.B) * triangle.sides.c,
-			width: Math.max(...Object.values(widths))
-		};
+	const triangleDimensions = {
+		height: Math.sin(triangle.angles.B) * triangle.sides.c,
+		width: Math.max(
+			...Object.values({
+				a: triangle.sides.a,
+				b: Math.cos(triangle.angles.C) * triangle.sides.b,
+				c: Math.cos(triangle.angles.B) * triangle.sides.c
+			})
+		)
 	};
+	console.log('triangleDimensions', triangleDimensions);
 
-	const triangleDimensions = getTriangleDimensions(triangle);
 	const triangleScale = Math.min(
 		(canvasDimensions.height * 0.8) / triangleDimensions.height,
 		(canvasDimensions.width * 0.8) / triangleDimensions.width
 	);
+	console.log('triangleScale', triangleScale);
 
 	const scaledTriangle = {
 		sides: {
@@ -83,36 +88,45 @@
 	};
 	console.log('scaledTriangle', scaledTriangle);
 
-	const verticalPadding = (canvasDimensions.height - triangleDimensions.height * triangleScale) / 2;
-	const horizontalPadding = (canvasDimensions.width - triangleDimensions.width * triangleScale) / 2;
+	const scaledTriangleDimensions = {
+		height: triangleDimensions.height * triangleScale,
+		width: triangleDimensions.width * triangleScale
+	};
+	console.log('scaledTriangleDimensions', scaledTriangleDimensions);
 
-	const padding = { vertical: verticalPadding, horizontal: horizontalPadding };
+	const padding = {
+		vertical: (canvasDimensions.height - scaledTriangleDimensions.height) / 2,
+		horizontal: (canvasDimensions.width - scaledTriangleDimensions.width) / 2
+	};
+	console.log('padding', padding);
 
-	console.log('triangle', triangle);
-	// Triangle origin is the B angle at lower left
-	let triangleOrigin = [padding.horizontal, padding.vertical];
+	// Triangle origin is the B angle at top left
+	const triangleOrigin = [padding.horizontal, padding.vertical];
+	console.log('triangleOrigin', triangleOrigin);
 
 	// Draw the triangle, beginning with B, then C, finally A with B at the bottom left, C at the bottom right, and A at the top.
-	const getTriangleCoords = (triangle: Triangle) => {
-		return {
-			A: [
-				triangleOrigin[0] + Math.abs(Math.cos(scaledTriangle.angles.B)) * scaledTriangle.sides.c,
-				triangleOrigin[1]
-			],
-			B: [
-				triangle.angles.B <= Math.PI / 2
-					? triangleOrigin[0]
-					: triangleOrigin[0] + triangleDimensions.width * triangleScale - scaledTriangle.sides.a,
-				triangleOrigin[1] + triangleDimensions.height * triangleScale
-			],
-			C: [
-				triangleOrigin[0] + scaledTriangle.sides.a,
-				triangleOrigin[1] + triangleDimensions.height * triangleScale
-			]
-		};
+	console.log('A', Math.cos(scaledTriangle.angles.B) * scaledTriangle.sides.c);
+	const triangleCoords = {
+		A: [
+			scaledTriangle.angles.B >= Math.PI / 2
+				? triangleOrigin[0]
+				: triangleOrigin[0] + Math.cos(scaledTriangle.angles.B) * scaledTriangle.sides.c,
+			triangleOrigin[1]
+		],
+		B: [
+			triangle.angles.B <= Math.PI / 2
+				? triangleOrigin[0]
+				: triangleOrigin[0] + scaledTriangleDimensions.width - scaledTriangle.sides.a,
+			triangleOrigin[1] + scaledTriangleDimensions.height
+		],
+		C: [
+			scaledTriangle.angles.B >= Math.PI
+				? triangleOrigin[0] + scaledTriangle.sides.a
+				: triangleOrigin[0] + scaledTriangle.sides.a,
+			triangleOrigin[1] + scaledTriangleDimensions.height
+		]
 	};
 
-	let triangleCoords = getTriangleCoords(triangle);
 	console.log('triangleCoords', triangleCoords);
 	let sideLabelCoords: { a: [number, number]; b: [number, number]; c: [number, number] } = {
 		a: [triangleOrigin[0] + (a * triangleScale) / 2, triangleOrigin[1]],
@@ -183,21 +197,9 @@
 
 		ctx.font = '18px Arial black';
 		// Draw angle labels
-		ctx.fillText(
-			`A: ${A.toFixed(0)}º`,
-			getTriangleCoords(triangle).A[0],
-			getTriangleCoords(triangle).A[1]
-		);
-		ctx.fillText(
-			`B: ${B.toFixed(0)}º`,
-			getTriangleCoords(triangle).B[0],
-			getTriangleCoords(triangle).B[1]
-		);
-		ctx.fillText(
-			`C: ${C.toFixed(0)}º`,
-			getTriangleCoords(triangle).C[0],
-			getTriangleCoords(triangle).C[1]
-		);
+		ctx.fillText(`A: ${A.toFixed(0)}º`, triangleCoords.A[0], triangleCoords.A[1]);
+		ctx.fillText(`B: ${B.toFixed(0)}º`, triangleCoords.B[0], triangleCoords.B[1]);
+		ctx.fillText(`C: ${C.toFixed(0)}º`, triangleCoords.C[0], triangleCoords.C[1]);
 
 		// Draw side labels
 		ctx.fillText(`a: ${triangle.sides.a.toFixed(2)}`, sideLabelCoords.a[0], sideLabelCoords.a[1]);

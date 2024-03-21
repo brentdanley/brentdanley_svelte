@@ -18,10 +18,10 @@
 	const degToRad = (deg: number): number => deg * (Math.PI / 180);
 
 	// TEMP
-	let A: number = 5;
-	let B: number = 40;
+	let A: number = 32;
+	let B: number = 45;
 	let C: number = 180 - A - B;
-	let a: number = 132;
+	let a: number = 32;
 	if (C < 0) {
 		console.error('Invalid triangle');
 		throw new Error('Invalid triangle');
@@ -152,12 +152,6 @@
 	});
 
 	$: {
-		if (a) {
-			// calculate angles from sides
-		} else if (A && B && C) {
-			// calculate sides from angles
-			clicked = A + B + C;
-		}
 	}
 
 	const handleSideChange = (event: Event) => {
@@ -177,7 +171,7 @@
 		const target = event.target as HTMLInputElement;
 		const value = parseFloat(target.value);
 		if (target.name === 'A') {
-			A = value;
+			triangle.angles.A = degToRad(value);
 		} else if (target.name === 'B') {
 			B = value;
 		} else if (target.name === 'C') {
@@ -186,7 +180,8 @@
 	};
 
 	const drawTriangle = () => {
-		ctx.strokeStyle = 'magenta';
+		ctx.strokeStyle = 'blue';
+		ctx.lineWidth = 5;
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 		ctx.beginPath();
 		ctx.moveTo(triangleCoords.A[0], triangleCoords.A[1]);
@@ -232,7 +227,7 @@
 
 	<label>
 		Angle A:
-		<input type="number" bind:value={A} on:change={handleAngleChange} />
+		<input type="range" min="0" max="180" step="1" bind:value={A} on:change={handleAngleChange} />
 	</label>
 
 	<label>

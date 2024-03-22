@@ -18,10 +18,10 @@
 	const degToRad = (deg: number): number => deg * (Math.PI / 180);
 
 	// TEMP
-	let A: number = 102;
+	let A: number = 16;
 	let B: number = 70;
 	let C: number = 180 - A - B;
-	let a: number = 32;
+	let a: number = 3.32;
 	if (C < 0) {
 		console.error('Invalid triangle');
 		throw new Error('Invalid triangle');
@@ -182,6 +182,8 @@
 		ctx.lineTo(triangleCoords.B[0], triangleCoords.B[1]);
 		ctx.lineTo(triangleCoords.C[0], triangleCoords.C[1]);
 		ctx.closePath();
+		ctx.fillStyle = 'rgba(0, 0, 255, 0.3)';
+		ctx.fill();
 		ctx.stroke();
 
 		ctx.font = '18px Arial black';

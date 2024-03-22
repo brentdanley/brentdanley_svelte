@@ -18,8 +18,8 @@
 	const degToRad = (deg: number): number => deg * (Math.PI / 180);
 
 	// TEMP
-	let A: number = 32;
-	let B: number = 45;
+	let A: number = 102;
+	let B: number = 70;
 	let C: number = 180 - A - B;
 	let a: number = 32;
 	if (C < 0) {
@@ -52,7 +52,6 @@
 			c: (a / Math.sin(degToRad(A))) * Math.sin(degToRad(C))
 		}
 	};
-	console.log('triangle', triangle);
 
 	const canvasDimensions = { width: 800, height: 800 };
 
@@ -66,13 +65,11 @@
 			})
 		)
 	};
-	console.log('triangleDimensions', triangleDimensions);
 
 	const triangleScale = Math.min(
 		(canvasDimensions.height * 0.8) / triangleDimensions.height,
 		(canvasDimensions.width * 0.8) / triangleDimensions.width
 	);
-	console.log('triangleScale', triangleScale);
 
 	const scaledTriangle = {
 		sides: {
@@ -86,26 +83,21 @@
 			C: triangle.angles.C
 		}
 	};
-	console.log('scaledTriangle', scaledTriangle);
 
 	const scaledTriangleDimensions = {
 		height: triangleDimensions.height * triangleScale,
 		width: triangleDimensions.width * triangleScale
 	};
-	console.log('scaledTriangleDimensions', scaledTriangleDimensions);
 
 	const padding = {
-		vertical: (canvasDimensions.height - scaledTriangleDimensions.height) / 2,
-		horizontal: (canvasDimensions.width - scaledTriangleDimensions.width) / 2
+		horizontal: (canvasDimensions.width - scaledTriangleDimensions.width) / 2,
+		vertical: (canvasDimensions.height - scaledTriangleDimensions.height) / 2
 	};
-	console.log('padding', padding);
 
 	// Triangle origin is the B angle at top left
 	const triangleOrigin = [padding.horizontal, padding.vertical];
-	console.log('triangleOrigin', triangleOrigin);
 
 	// Draw the triangle, beginning with B, then C, finally A with B at the bottom left, C at the bottom right, and A at the top.
-	console.log('A', Math.cos(scaledTriangle.angles.B) * scaledTriangle.sides.c);
 	const triangleCoords = {
 		A: [
 			scaledTriangle.angles.B >= Math.PI / 2
@@ -114,29 +106,31 @@
 			triangleOrigin[1]
 		],
 		B: [
-			triangle.angles.B <= Math.PI / 2
-				? triangleOrigin[0]
-				: triangleOrigin[0] + scaledTriangleDimensions.width - scaledTriangle.sides.a,
+			scaledTriangle.angles.B >= Math.PI / 2
+				? triangleOrigin[0] + scaledTriangleDimensions.width - scaledTriangle.sides.a
+				: triangleOrigin[0],
 			triangleOrigin[1] + scaledTriangleDimensions.height
 		],
 		C: [
-			scaledTriangle.angles.B >= Math.PI
-				? triangleOrigin[0] + scaledTriangle.sides.a
+			scaledTriangle.angles.B >= Math.PI / 2
+				? triangleOrigin[0] + scaledTriangleDimensions.width
 				: triangleOrigin[0] + scaledTriangle.sides.a,
 			triangleOrigin[1] + scaledTriangleDimensions.height
 		]
 	};
 
-	console.log('triangleCoords', triangleCoords);
 	let sideLabelCoords: { a: [number, number]; b: [number, number]; c: [number, number] } = {
-		a: [triangleOrigin[0] + (a * triangleScale) / 2, triangleOrigin[1]],
+		a: [
+			triangleCoords.B[0] + (triangleCoords.C[0] - triangleCoords.B[0]) / 2,
+			triangleCoords.B[1] + 30
+		],
 		b: [
-			triangleCoords.C[0] - Math.cos(triangle.angles.C) * ((triangle.sides.b * triangleScale) / 2),
-			triangleCoords.C[1] - Math.sin(triangle.angles.C) * ((triangle.sides.b * triangleScale) / 2)
+			triangleCoords.A[0] + (triangleCoords.C[0] - triangleCoords.A[0]) / 2 + 30,
+			triangleCoords.A[1] + (triangleCoords.C[1] - triangleCoords.A[1]) / 2
 		],
 		c: [
-			triangleCoords.B[0] + Math.cos(triangle.angles.B) * ((triangle.sides.c * triangleScale) / 2),
-			triangleCoords.B[1] - Math.sin(triangle.angles.B) * ((triangle.sides.c * triangleScale) / 2)
+			triangleCoords.A[0] + (triangleCoords.B[0] - triangleCoords.A[0]) / 2 - 80,
+			triangleCoords.A[1] + (triangleCoords.B[1] - triangleCoords.A[1]) / 2
 		]
 	};
 

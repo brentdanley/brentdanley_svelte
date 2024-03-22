@@ -206,39 +206,6 @@
 
 <h1>Triangle Calculator</h1>
 
-<div>
-	<p>Clicked {clicked}.</p>
-	<label>
-		Side a:
-		<input type="number" bind:value={a} on:change={handleSideChange} />
-	</label>
-
-	<!-- <label>
-		Side b:
-		<input type="number" bind:value={b} on:change={handleSideChange} />
-	</label>
-
-	<label>
-		Side c:
-		<input type="number" bind:value={c} on:change={handleSideChange} />
-	</label> -->
-
-	<label>
-		Angle A:
-		<input type="range" min="0" max="180" step="1" bind:value={A} on:change={handleAngleChange} />
-	</label>
-
-	<label>
-		Angle B:
-		<input type="number" bind:value={B} on:change={handleAngleChange} />
-	</label>
-
-	<label>
-		Angle C:
-		<input type="number" bind:value={C} on:change={handleAngleChange} />
-	</label>
-</div>
-
 <canvas
 	class="canvas"
 	bind:this={canvas}

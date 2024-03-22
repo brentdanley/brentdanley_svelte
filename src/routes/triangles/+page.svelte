@@ -1,18 +1,4 @@
 <script lang="ts">
-	/**
-	 * This is a simple Svelte component that calculates the angles of a triangle
-	 * given the lengths of its sides, or the lengths of its sides given the angles.
-	 *
-	 * It also draws a triangle on a canvas.
-	 *
-	 * When the user changes a side or angle, determine if there's enough information to draw a triangle. In addition to calculating sides and angles, calculate the canvas points for each corner of the triangle.
-	 * 1. Calculate the sides
-	 * 2. Get scale factor
-	 * 3. Set new triangle side values
-	 * 4. Calculate height and width of triangle
-	 * 5. Calculate triangle origin
-	 * 6. Calculate triangle coordinates
-	 */
 	import { onMount } from 'svelte';
 
 	const degToRad = (deg: number): number => deg * (Math.PI / 180);
@@ -77,10 +63,8 @@
 		vertical: (canvasDimensions.height - scaledTriangleDimensions.height) / 2
 	};
 
-	// Triangle origin is the B angle at top left
 	$: triangleOrigin = [padding.horizontal, padding.vertical];
 
-	// Draw the triangle, beginning with B, then C, finally A with B at the bottom left, C at the bottom right, and A at the top.
 	$: triangleCoords = {
 		A: [
 			scaledTriangle.angles.B >= Math.PI / 2
@@ -117,11 +101,6 @@
 		]
 	};
 
-	$: console.log('B', B);
-	$: console.log('sidelabels', sideLabelCoords.b);
-	$: console.log('triangleCoords.A[0]', triangleCoords.A[0]);
-	$: console.log('triangleCoords.C[1]', triangleCoords.C[0]);
-
 	let canvas: HTMLCanvasElement;
 	let ctx;
 
@@ -130,7 +109,7 @@
 		drawTriangle();
 	});
 
-	const handleAngleChange = (event: Event) => {
+	const handleAngleChange = () => {
 		drawTriangle();
 	};
 

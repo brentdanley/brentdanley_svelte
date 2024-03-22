@@ -18,29 +18,12 @@
 	const degToRad = (deg: number): number => deg * (Math.PI / 180);
 
 	// TEMP
-	let A: number = 96;
-	let B: number = 70;
-	let C: number = 180 - A - B;
-	let a: number = 3.32;
-	if (C < 0) {
-		console.error('Invalid triangle');
-		throw new Error('Invalid triangle');
-	}
+	$: A = 50;
+	$: B = 70;
+	$: C = 180 - A - B;
+	const a: number = 1.0;
 
-	type Triangle = {
-		sides: {
-			a: number;
-			b: number;
-			c: number;
-		};
-		angles: {
-			A: number;
-			B: number;
-			C: number;
-		};
-	};
-
-	const triangle: Triangle = {
+	$: triangle = {
 		angles: {
 			A: degToRad(A),
 			B: degToRad(B),
@@ -55,7 +38,7 @@
 
 	const canvasDimensions = { width: 800, height: 800 };
 
-	const triangleDimensions = {
+	$: triangleDimensions = {
 		height: Math.sin(triangle.angles.B) * triangle.sides.c,
 		width: Math.max(
 			...Object.values({
@@ -66,12 +49,12 @@
 		)
 	};
 
-	const triangleScale = Math.min(
+	$: triangleScale = Math.min(
 		(canvasDimensions.height * 0.8) / triangleDimensions.height,
 		(canvasDimensions.width * 0.8) / triangleDimensions.width
 	);
 
-	const scaledTriangle = {
+	$: scaledTriangle = {
 		sides: {
 			a: triangle.sides.a * triangleScale,
 			b: triangle.sides.b * triangleScale,
@@ -84,21 +67,21 @@
 		}
 	};
 
-	const scaledTriangleDimensions = {
+	$: scaledTriangleDimensions = {
 		height: triangleDimensions.height * triangleScale,
 		width: triangleDimensions.width * triangleScale
 	};
 
-	const padding = {
+	$: padding = {
 		horizontal: (canvasDimensions.width - scaledTriangleDimensions.width) / 2,
 		vertical: (canvasDimensions.height - scaledTriangleDimensions.height) / 2
 	};
 
 	// Triangle origin is the B angle at top left
-	const triangleOrigin = [padding.horizontal, padding.vertical];
+	$: triangleOrigin = [padding.horizontal, padding.vertical];
 
 	// Draw the triangle, beginning with B, then C, finally A with B at the bottom left, C at the bottom right, and A at the top.
-	const triangleCoords = {
+	$: triangleCoords = {
 		A: [
 			scaledTriangle.angles.B >= Math.PI / 2
 				? triangleOrigin[0]
@@ -119,25 +102,27 @@
 		]
 	};
 
-	let sideLabelCoords: { a: [number, number]; b: [number, number]; c: [number, number] } = {
+	$: sideLabelCoords = {
 		a: [
 			triangleCoords.B[0] + (triangleCoords.C[0] - triangleCoords.B[0]) / 2,
 			triangleCoords.B[1] + 30
 		],
 		b: [
-			triangleCoords.A[0] + (triangleCoords.C[0] - triangleCoords.A[0]) / 2 + 30,
+			triangleCoords.A[0] + (triangleCoords.C[0] - triangleCoords.A[0]) / 2 + 70,
 			triangleCoords.A[1] + (triangleCoords.C[1] - triangleCoords.A[1]) / 2
 		],
 		c: [
-			triangleCoords.A[0] + (triangleCoords.B[0] - triangleCoords.A[0]) / 2 - 80,
+			triangleCoords.A[0] + (triangleCoords.B[0] - triangleCoords.A[0]) / 2 - 50,
 			triangleCoords.A[1] + (triangleCoords.B[1] - triangleCoords.A[1]) / 2
 		]
 	};
 
-	let clicked: number = 0;
+	$: console.log('B', B);
+	$: console.log('sidelabels', sideLabelCoords.b);
+	$: console.log('triangleCoords.A[0]', triangleCoords.A[0]);
+	$: console.log('triangleCoords.C[1]', triangleCoords.C[0]);
 
 	let canvas: HTMLCanvasElement;
-
 	let ctx;
 
 	onMount(() => {
@@ -145,32 +130,8 @@
 		drawTriangle();
 	});
 
-	$: {
-	}
-
-	const handleSideChange = (event: Event) => {
-		const target = event.target as HTMLInputElement;
-		const value = parseFloat(target.value);
-		if (target.name === 'a') {
-			a = value;
-		} else if (target.name === 'b') {
-			b = value;
-		} else if (target.name === 'c') {
-			c = value;
-		}
-		drawTriangle();
-	};
-
 	const handleAngleChange = (event: Event) => {
-		const target = event.target as HTMLInputElement;
-		const value = parseFloat(target.value);
-		if (target.name === 'A') {
-			triangle.angles.A = degToRad(value);
-		} else if (target.name === 'B') {
-			B = value;
-		} else if (target.name === 'C') {
-			C = value;
-		}
+		drawTriangle();
 	};
 
 	const drawTriangle = () => {
@@ -190,9 +151,9 @@
 		ctx.lineWidth = 2;
 		ctx.fillStyle = 'black';
 		// Draw angle labels
-		ctx.fillText(`A: ${A.toFixed(0)}º`, triangleCoords.A[0], triangleCoords.A[1]);
-		ctx.fillText(`B: ${B.toFixed(0)}º`, triangleCoords.B[0], triangleCoords.B[1]);
-		ctx.fillText(`C: ${C.toFixed(0)}º`, triangleCoords.C[0], triangleCoords.C[1]);
+		ctx.fillText(`A: ${A.toFixed(0)}º`, triangleCoords.A[0], triangleCoords.A[1] - 30);
+		ctx.fillText(`B: ${B.toFixed(0)}º`, triangleCoords.B[0], triangleCoords.B[1] + 30);
+		ctx.fillText(`C: ${C.toFixed(0)}º`, triangleCoords.C[0], triangleCoords.C[1] + 30);
 
 		// Draw side labels
 		ctx.fillText(`a: ${triangle.sides.a.toFixed(2)}`, sideLabelCoords.a[0], sideLabelCoords.a[1]);
@@ -205,6 +166,27 @@
 </script>
 
 <h1>Triangle Calculator</h1>
+
+<div class="controls">
+	<label for="A">A</label>
+	<input
+		type="range"
+		name="A"
+		min="1"
+		max={180 - B}
+		bind:value={A}
+		on:input={handleAngleChange}
+	/><span>{A}º</span>
+	<label for="B">B</label>
+	<input
+		type="range"
+		name="B"
+		min="1"
+		max={180 - A}
+		bind:value={B}
+		on:input={handleAngleChange}
+	/><span>{B}º</span>
+</div>
 
 <canvas
 	class="canvas"

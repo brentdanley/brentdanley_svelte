@@ -18,7 +18,7 @@
 	const degToRad = (deg: number): number => deg * (Math.PI / 180);
 
 	// TEMP
-	let A: number = 16;
+	let A: number = 96;
 	let B: number = 70;
 	let C: number = 180 - A - B;
 	let a: number = 3.32;
@@ -187,6 +187,8 @@
 		ctx.stroke();
 
 		ctx.font = '18px Arial black';
+		ctx.lineWidth = 2;
+		ctx.fillStyle = 'black';
 		// Draw angle labels
 		ctx.fillText(`A: ${A.toFixed(0)}º`, triangleCoords.A[0], triangleCoords.A[1]);
 		ctx.fillText(`B: ${B.toFixed(0)}º`, triangleCoords.B[0], triangleCoords.B[1]);

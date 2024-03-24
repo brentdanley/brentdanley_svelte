@@ -4,10 +4,10 @@
 	const degToRad = (deg: number): number => deg * (Math.PI / 180);
 
 	// TEMP
-	$: A = 50;
-	$: B = 70;
+	$: A = 60;
+	$: B = 60;
 	$: C = 180 - A - B;
-	const a: number = 1.0;
+	const a: number = 189867640;
 
 	$: triangle = {
 		angles: {
@@ -173,6 +173,23 @@
 	width={canvasDimensions.width}
 	height={canvasDimensions.height}
 />
+
+<div>
+	<h3>Height of the triangle is:</h3>
+	<code>
+		sin(B) * c | sin({B}º) * {triangle.sides.c.toFixed(2)}<br />
+		OR<br />
+		sin(C) * b | sin({C}º) * {triangle.sides.b.toFixed(2)}
+	</code>
+</div>
+<div>
+	<h3>Width of the triangle is the greater of:</h3>
+	<code>
+		a | {triangle.sides.a.toFixed(2)}<br />
+		cos(C) * b | cos({C}º) * {triangle.sides.b.toFixed(2)}<br />
+		cos(B) * c | cos({B}º) * {triangle.sides.c.toFixed(2)}
+	</code>
+</div>
 
 <style lang="scss">
 	.canvas {

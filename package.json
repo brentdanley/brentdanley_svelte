@@ -25,7 +25,7 @@
 		"prettier": "^2.6.2",
 		"prettier-plugin-svelte": "^2.10.1",
 		"sass": "^1.56.1",
-		"svelte": "^4.0.0",
+		"svelte": "^5.0.0-next.130",
 		"svelte-carousel": "^1.0.25",
 		"svelte-check": "^3.4.3",
 		"svelte-preprocess": "^5.0.3",

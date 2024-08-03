@@ -1,5 +1,5 @@
 <script context="module" lang="ts">
-	export type Activities = 'pin' | 'hike' | 'bike' | 'paddle' | 'flight' | 'photo';
+	export type Activities = 'pin' | 'hike' | 'bike' | 'paddle' | 'flight' | 'photo' | 'boat';
 	export type Track = {
 		filename: string;
 		color?: string;

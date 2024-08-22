@@ -62,10 +62,12 @@ Here’s the prompt, and you can see above what it generated:
 
 > Prompt: "Create a hero image that combines the warmth and homeliness of traditional bread baking with the futuristic elements of AI technology. The scene should feature a freshly baked loaf of bread on a rustic wooden table, surrounded by baking tools like a rolling pin, flour, and a mixing bowl. Above the bread, digital lines, binary code, and subtle holographic elements should swirl, suggesting AI integration into the baking process. The background should be a cozy kitchen with warm lighting, contrasting with the cool, sleek digital elements, blending the old-world charm of baking with modern technology."
 
-I’d highly encourage you to use AI if you aren’t already. Explore its capabilities, see how it can assist in everyday tasks, and get a feel for where it excels and where it might need a little help. In Ethan Mollick's excellent book "Co-Intelligence," he suggests Four Rules for Co-Intelligence, or for using AIs: always invite AI to the table, be the human in the loop, treat AI like a person (but tell it what kind of person it is), and assume this is the worst AI you will ever use. This bread-baking experiment was my way of putting those principles into practice, and the results were pretty excellent.
+I’d highly encourage you to use AI if you aren’t already. Explore its capabilities, see how it can assist in everyday tasks, and get a feel for where it excels and where it might need a little help. In Ethan Mollick's excellent book "[Co-Intelligence](https://a.co/d/cZVqRNd)," he suggests Four Rules for Co-Intelligence, or for using AIs: always invite AI to the table, be the human in the loop, treat AI like a person (but tell it what kind of person it is), and assume this is the worst AI you will ever use. This bread-baking experiment was my way of putting those principles into practice, and the results were pretty excellent.
 
 Now if only it could actually bake the bread.
 
 ---
 
 _Disclaimer - Obviously, ChatGPT helped me draft this post._
+
+[Cook's Illustrated Cookbook: 2,000 Recipes from 20 Years of America's Most Trusted Cooking Magazine](https://a.co/d/hY3x9SN), page 586

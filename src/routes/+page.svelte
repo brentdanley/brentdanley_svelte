@@ -3,7 +3,7 @@
 </script>
 
 <CloudinaryImage
-	image_name="kirsten_lookingback"
+	public_id="brentdanley.com/kirsten_lookingback"
 	alt="Kirsten looking back at the camera"
 	caption="Kirsten looking back at the camera"
 />

@@ -26,7 +26,7 @@ Throughout the process, Officer George was not only professional but also genuin
 
 A few days later, I noticed a Jeep resembling the one in the video parked in the same garage. I decided to leave a polite note, along with my contact information, and a frame from the video showing the incident. My intention was simple: to give the criminal an opportunity to do the right thing.
 
-<CloudinaryImage public_id="brentdanley.com/tesla_smash/note_for_lily" alt="I left a note on the Jeep's windscreen" caption="I left a photo, note, and my contact information on the Jeep that hit my Tesla." />
+<CloudinaryImage public_id="brentdanley.com/tesla_smash/note_for_lily" alt="I left a note on the Jeep's windscreen" caption="I left a photo, note, and my contact information on the Jeep that hit my Tesla. (head generated with AI)" />
 
 The next day, I received a call from Lilybeth, the driver, who explained why she had left the scene without leaving a note. While the conversation was a bit disheartening, I appreciated that she provided her insurance information, allowing me to move forward with repairs.
 

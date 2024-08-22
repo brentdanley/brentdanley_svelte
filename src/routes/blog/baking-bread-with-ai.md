@@ -1,6 +1,6 @@
 ---
 title: 'Baking Bread with AI: A Fun Experiment in the Kitchen'
-date: '2024-08-01'
+date: '2024-08-18'
 tags: [ai, bread, baking, cooking]
 ---
 

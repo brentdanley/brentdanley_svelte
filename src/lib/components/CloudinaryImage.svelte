@@ -2,6 +2,8 @@
 	export let alt: string;
 	export let public_id: string;
 	export let caption: string;
+
+	console.log('image name', public_id);
 </script>
 
 <div class="cloudinary-image">

@@ -12,7 +12,7 @@ tags: [ai, bread, baking, cooking]
 
 In this post, I decided to bring AI into the kitchen with me to see how it could help streamline a classic bread recipe. I've baked this bread loaf recipe several times, so I know the steps well. However, I rarely want the big cookbook out while I'm baking. It takes up too much counter space, and honestly, the recipe is far too detailed for what I need at this point. When I first started baking this bread, those lengthy descriptions were helpful. Now, all I need are the ingredients and the basic instructions.
 
-<CloudinaryImage public_id="brentdanley.com/bread_ai/bread_cookbook" caption="bread with ai" alt="cookbook bread recipe" />
+<CloudinaryImage public_id="brentdanley.com/bread_ai/bread_cookbook" caption="Cook's Illustrated Cookbook: 2,000 Recipes from 20 Years of America's Most Trusted Cooking Magazine" alt="Cook's Illustrated Cookbook: 2,000 Recipes from 20 Years of America's Most Trusted Cooking Magazine" />
 
 Since I’m trying to use AI for everything these days—partly to understand its strengths and weaknesses better, and partly just for fun—I thought this might be a perfect opportunity. I uploaded the photo above and asked the AI to simplify the recipe.
 

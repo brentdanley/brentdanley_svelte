@@ -32,11 +32,17 @@ Dashcam works similarly but is active when the car is driving. If an incident oc
 
 <CloudinaryImage public_id="brentdanley.com/tesla_smash/more-than-a-little-scratch" alt="Lilybeth said it was just a little scratch." caption="Lilybeth said it was just a little scratch." />
 
+## Locating the driver
+
 Hopeful for some community support, I shared the video on [Nextdoor](https://nextdoor.com/news_feed). Someone, I hoped, knew this person and could help the police find her. The response was overwhelming, with many people offering helpful suggestions and expressing their frustration over the situation. It was heartening to see so many individuals coming together to support a neighbor in need.
+
+## Working with the Police
 
 Armed with the video evidence, I contacted the Portland Police Department and filed an official report. Officer George, who handled my case, was impressed by the clear footage and indicated that this level of evidence might actually lead to a resolution, which is rare in these types of cases.
 
 Throughout the process, Officer George was not only professional but also genuinely concerned about the situation. He contacted me periodically to provide updates and gather additional evidence and information. His dedication to the case made it clear that he wasn’t just doing a job—he cared about ensuring that justice was served. The cooperation between myself, the police, and even the parking garage staff, who assisted by providing additional video footage, was crucial in moving this case forward.
+
+## She returned to the scene of the crime
 
 A few days later, I noticed a Jeep resembling the one in the video parked in the same garage. I decided to leave a polite note, along with my contact information, and a frame from the video showing the incident. My intention was simple: to give the criminal an opportunity to do the right thing.
 
@@ -46,20 +52,12 @@ The next day, I received a call from Lilybeth, the driver, who explained why she
 
 My insurance company handled everything smoothly, and the parking garage staff did their best to assist by providing footage that might have been helpful to the investigation. While that footage didn’t yield any new leads, the overall collaboration with everyone involved was encouraging.
 
+## Final Thoughts
+
+I'm grateful for the advanced surveillance technology in my Tesla, without which I would not have known the type of vehicle that hit mine and the time of the incident. With this information I was able to make a police report, get video from the parking garage positively identifying the vehicle, and eventually to leave a note on the Jeep.
+
+I'm glad Lilybeth called me and provided her insurance information. She received a citation from the police, and I hope she learned a valuable lesson.
+
+I have an appointment to get a repair estimate, and the dent and scratches will eventually be fixed. My insurance provider will go after hers to cover those costs.
+
 Back into parking spaces. If you hit a car while driving, leave your contact and insurance information. If the vehicle you hit is a Tesla, there's a good chance you were recorded with one or more of its cameras.
-
-## Tesla Security
-
-My 2024 Tesla Model 3 Performance has cameras looking in every direction. These cameras enable the car to have "vision", which is used for its Full Self-Driving (FSD) and Auto Park capabilities. It utilizes these same cameras for security, which is divided into [Sentry and Dashcam](https://www.tesla.com/ownersmanual/model3/en_us/GUID-49096E34-97D2-4182-9414-2F7F4E88EE79.html).
-
-### Sentry
-
-When parked and Sentry is active, any suspicious activity will cause the previous 10 minutes of videos from the cameras to be saved.
-
-Sentry can be set to not record events at home, work, or any favorite locations. This preserves the battery when in a known safe location.
-
-### Dashcam
-
-Dashcam is like Sentry, except for when the car is driving. Like Sentry, if there's an incident on the road, Dashcam will save the previous 10 minutes of video leading up to the incident. At any time, the driver can manually record a Dashcam video by pressing the horn or a button on the display.
-
-What's interesting about this incident is that Sentry recorded TWO events, one when the Jeep hit the car, and another when the woman walked closely in front of my car when leaving the parking garage. If she hadn't triggered the second event by walking near my car, I wouldn't have gotten the video of her Jeep backing away, and her inspecting the damage while still inside her Jeep. I wish Tesla would save several minutes of video AFTER incidents.

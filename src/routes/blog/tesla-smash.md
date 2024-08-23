@@ -12,9 +12,23 @@ tags: [tesla, accident, incident, police, insurance]
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dWip6i5ssKg?si=wZyzRwGyROSaXdXs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-On Thursday, August 1, I experienced firsthand the incredible capabilities of [Tesla’s Sentry Mode](https://www.tesla.com/ownersmanual/model3/en_us/GUID-56703182-8191-4DAE-AF07-2FDC0EB64663.html) when my 2024 Model 3 Performance was hit while parked in the Temple Street Parking Garage. I left the garage at 13:30 to attend a sailing lesson, after which I found a large dent and scratches on the passenger side front quarter-panel. It was a disappointing discovery, but I was hopeful that my Tesla’s advanced technology had captured what happened.
+On Thursday, August 1, I experienced firsthand the incredible capabilities of [Tesla’s Sentry](https://www.tesla.com/ownersmanual/model3/en_us/GUID-56703182-8191-4DAE-AF07-2FDC0EB64663.html) when my 2024 Model 3 Performance was hit while parked in the Temple Street Parking Garage. I left the garage at 13:30 to attend a sailing lesson, after which I found a large dent and scratches on the passenger side front quarter-panel. It was a disappointing discovery, but I was hopeful that my Tesla’s advanced technology had captured what happened.
 
-Tesla’s Sentry Mode uses the car’s array of cameras to continuously monitor its surroundings, even when parked. This feature automatically saves video footage when an incident occurs, providing invaluable evidence in situations like mine. Sure enough, the video captured not only the Jeep that hit my car, but also the driver and exact time of the incident (11:34).
+## Tesla Security
+
+My 2024 Tesla Model 3 Performance is equipped with an array of cameras looking in every direction. These cameras provide the car with "vision," enabling its Full Self-Driving (FSD) and Auto Park capabilities. But they also serve a critical role in security, which is divided into [Sentry and Dashcam](https://www.tesla.com/ownersmanual/model3/en_us/GUID-49096E34-97D2-4182-9414-2F7F4E88EE79.html). Videos for the previous hour of driving are recorded to a USB storage device located in the glove box, as well as any saved Sentry or Dashcam footage.
+
+### Sentry
+
+Tesla’s Sentry continuously monitor its surroundings when parked. Any suspicious activity triggers the system to automatically save the previous 10 minutes of video, providing invaluable evidence in situations like mine.
+
+The footage from this incident captured not only the Jeep that hit my car but also the driver and the exact time of the impact (11:34). Interestingly, Sentry Mode recorded two separate events: one when the Jeep made contact, and another when the woman walked closely in front of my car as she left the parking garage. If she hadn’t triggered the second event, I wouldn’t have captured the crucial moments of her Jeep backing away and her inspecting the damage from inside the vehicle. I was able to stitch these videos together, combining footage from both the front and right-side cameras, to create a complete narrative of the incident—from before the impact to when she walked out of the garage.
+
+I do wish Tesla would save several minutes of video after incidents as well.
+
+### Dashcam
+
+Dashcam works similarly but is active when the car is driving. If an incident occurs on the road, Dashcam will save the previous 10 minutes of video leading up to the event. Drivers can also manually record a Dashcam video at any time by pressing the horn or a button on the display.
 
 <CloudinaryImage public_id="brentdanley.com/tesla_smash/more-than-a-little-scratch" alt="Lilybeth said it was just a little scratch." caption="Lilybeth said it was just a little scratch." />
 
@@ -33,3 +47,19 @@ The next day, I received a call from Lilybeth, the driver, who explained why she
 My insurance company handled everything smoothly, and the parking garage staff did their best to assist by providing footage that might have been helpful to the investigation. While that footage didn’t yield any new leads, the overall collaboration with everyone involved was encouraging.
 
 Back into parking spaces. If you hit a car while driving, leave your contact and insurance information. If the vehicle you hit is a Tesla, there's a good chance you were recorded with one or more of its cameras.
+
+## Tesla Security
+
+My 2024 Tesla Model 3 Performance has cameras looking in every direction. These cameras enable the car to have "vision", which is used for its Full Self-Driving (FSD) and Auto Park capabilities. It utilizes these same cameras for security, which is divided into [Sentry and Dashcam](https://www.tesla.com/ownersmanual/model3/en_us/GUID-49096E34-97D2-4182-9414-2F7F4E88EE79.html).
+
+### Sentry
+
+When parked and Sentry is active, any suspicious activity will cause the previous 10 minutes of videos from the cameras to be saved.
+
+Sentry can be set to not record events at home, work, or any favorite locations. This preserves the battery when in a known safe location.
+
+### Dashcam
+
+Dashcam is like Sentry, except for when the car is driving. Like Sentry, if there's an incident on the road, Dashcam will save the previous 10 minutes of video leading up to the incident. At any time, the driver can manually record a Dashcam video by pressing the horn or a button on the display.
+
+What's interesting about this incident is that Sentry recorded TWO events, one when the Jeep hit the car, and another when the woman walked closely in front of my car when leaving the parking garage. If she hadn't triggered the second event by walking near my car, I wouldn't have gotten the video of her Jeep backing away, and her inspecting the damage while still inside her Jeep. I wish Tesla would save several minutes of video AFTER incidents.

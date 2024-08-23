@@ -68,12 +68,6 @@ Now if only it could actually bake the bread.
 
 ---
 
-_Disclaimer - Obviously, ChatGPT helped me draft this post._
-
-[Cook's Illustrated Cookbook: 2,000 Recipes from 20 Years of America's Most Trusted Cooking Magazine](https://a.co/d/hY3x9SN), page 586
-
----
-
 Here is the simplified bread loaf recipe:
 
 ### Instructions:
@@ -97,3 +91,9 @@ Here is the simplified bread loaf recipe:
 9. **Bake with Steam**: Place the saucepan with the boiling water directly on the oven floor or on a lower rack. Place the loaf pan on the preheated baking stone. Close the oven door quickly to trap the steam. Bake the loaf for 40 to 50 minutes, until the crust is golden brown and the internal temperature registers 195°F.
 
 10. **Cool**: Remove the bread from the pan and cool on a wire rack for 2 hours before slicing.
+
+---
+
+_Disclaimer - Obviously, ChatGPT helped me draft this post._
+
+[Cook's Illustrated Cookbook: 2,000 Recipes from 20 Years of America's Most Trusted Cooking Magazine](https://a.co/d/hY3x9SN), page 586

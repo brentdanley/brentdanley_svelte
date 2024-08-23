@@ -46,7 +46,11 @@ It did, and even provided a link to download the file. Now, I’ve got a concise
 
 ## A Fun Collaboration with AI
 
-After the bread was baked, I uploaded a photo of the finished loaf to the AI just to see how it would "react." It responded:
+After the bread was baked, I uploaded a photo of the finished loaf to the AI just to see how it would "react."
+
+<CloudinaryImage public_id="brentdanley.com/bread_ai/fresh-bread" alt="A fresh loaf" caption="A fresh loaf" />
+
+It responded:
 
 > "There's nothing quite like the smell of freshly baked bread filling the kitchen. When you do slice into it, I hope it tastes as good as it looks and smells. Enjoy every bite! 🍞"
 

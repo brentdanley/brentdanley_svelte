@@ -71,3 +71,29 @@ Now if only it could actually bake the bread.
 _Disclaimer - Obviously, ChatGPT helped me draft this post._
 
 [Cook's Illustrated Cookbook: 2,000 Recipes from 20 Years of America's Most Trusted Cooking Magazine](https://a.co/d/hY3x9SN), page 586
+
+---
+
+Here is the simplified bread loaf recipe:
+
+### Instructions:
+
+1. **Prep Oven**: Place a baking stone on the middle rack of the oven. Preheat the oven to 200°F. Once the temperature reaches 200°F, turn off the oven.
+
+2. **Mix Ingredients**: In a 4-cup liquid measuring cup, combine **1 cup whole milk (heated to 110°F)**, **1/3 cup water (heated to 110°F)**, **3 tablespoons honey**, and **2 tablespoons melted unsalted butter**.
+
+3. **Combine Dry Ingredients**: In the bowl of a stand mixer, mix **3 1/2 cups (19 1/4 ounces) bread flour**, **2 1/4 teaspoons instant or rapid-rise yeast**, and **2 teaspoons salt**.
+
+4. **Form Dough**: Slowly add the wet mixture to the dry ingredients while mixing on low speed. Let the dough come together, about 2 minutes.
+
+5. **Knead Dough**: Increase the speed to medium and knead until the dough is smooth and elastic, about 10 minutes.
+
+6. **First Rise**: Transfer the dough to a lightly floured surface, form it into a ball, place it in a lightly oiled bowl, and cover with plastic wrap. Place the bowl in the warm oven on the middle rack and let it rise until doubled in size, about 40 to 50 minutes.
+
+7. **Shape & Proof**: Grease a 9x5-inch loaf pan. Press the dough into a rectangle about 1 inch thick, then roll it into a log, pressing the seam to seal. Place the log in the pan, seam side down. Cover loosely with greased plastic wrap and let it rise at room temperature until doubled in size, about 1 hour.
+
+8. **Preheat for Baking**: While the dough is proofing, remove the bowl and baking stone from the oven. Place the baking stone back on the middle rack, and preheat the oven to 350°F. Bring 2 cups of water to a boil in a heatproof saucepan on the stove.
+
+9. **Bake with Steam**: Place the saucepan with the boiling water directly on the oven floor or on a lower rack. Place the loaf pan on the preheated baking stone. Close the oven door quickly to trap the steam. Bake the loaf for 40 to 50 minutes, until the crust is golden brown and the internal temperature registers 195°F.
+
+10. **Cool**: Remove the bread from the pan and cool on a wire rack for 2 hours before slicing.

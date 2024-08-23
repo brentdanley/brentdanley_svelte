@@ -20,7 +20,7 @@ My 2024 Tesla Model 3 Performance is equipped with an array of cameras looking i
 
 ### Sentry
 
-Tesla’s Sentry continuously monitor its surroundings when parked. Any suspicious activity triggers the system to automatically save the previous 10 minutes of video, providing invaluable evidence in situations like mine.
+Tesla’s Sentry continuously monitor its surroundings when parked. Any suspicious activity triggers the system to automatically save the previous minute of video, providing invaluable evidence in situations like mine.
 
 The footage from this incident captured not only the Jeep that hit my car but also the driver and the exact time of the impact (11:34). Interestingly, Sentry Mode recorded two separate events: one when the Jeep made contact, and another when the woman walked closely in front of my car as she left the parking garage. If she hadn’t triggered the second event, I wouldn’t have captured the crucial moments of her Jeep backing away and her inspecting the damage from inside the vehicle. I was able to stitch these videos together, combining footage from both the front and right-side cameras, to create a complete narrative of the incident—from before the impact to when she walked out of the garage.
 

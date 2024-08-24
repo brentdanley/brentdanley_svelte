@@ -6,11 +6,12 @@ tags: [tesla, accident, incident, police, insurance]
 
 <script>
     import CloudinaryImage from '$lib/components/CloudinaryImage.svelte'
+    import YoutubePlayer from '$lib/components/YoutubePlayer.svelte'
 </script>
 
 **TL;DR:** A Jeep hit my new Tesla and didn’t leave any information. Tesla's Sentry system recorded the incident, and it was instrumental in identifying the woman responsible. Her insurance will cover the repairs. She received a citation from the police for the crime of hit and run. Officer George of the Portland Police Department was fantastic.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dWip6i5ssKg?si=wZyzRwGyROSaXdXs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<YoutubePlayer video_id="dWip6i5ssKg" />
 
 On Thursday, August 1, I experienced firsthand the incredible capabilities of [Tesla’s Sentry](https://www.tesla.com/ownersmanual/model3/en_us/GUID-56703182-8191-4DAE-AF07-2FDC0EB64663.html) when my 2024 Model 3 Performance was hit while parked in the Temple Street Parking Garage. I left the garage at 13:30 to attend a sailing lesson, after which I found a large dent and scratches on the passenger side front quarter-panel. It was a disappointing discovery, but I was hopeful that my Tesla’s advanced technology had captured what happened.
 

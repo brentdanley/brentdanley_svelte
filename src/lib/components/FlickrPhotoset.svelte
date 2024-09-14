@@ -34,6 +34,7 @@
 		});
 
 		photos = response.data.photoset.photo;
+		console.log('photos', photos);
 	});
 
 	let isPopupOpen = false;

@@ -38,7 +38,7 @@
 	export let tracks: Track[] = [];
 	export let points: Point[] = [];
 	export let sectionals: String[] = [];
-	export let plates: String[];
+	export let plates: String[] = [];
 
 	const mapSectionals = writable({
 		newyork_sectional: false,
